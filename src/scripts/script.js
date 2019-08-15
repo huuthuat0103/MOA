@@ -1,11 +1,24 @@
 
-function openRightMenu() {
-    // document.getElementById("rightMenu").style.display = "block";
-}
+$(document).ready(function(){
+    var owl = $('#show_local');
+	owl.owlCarousel({
+		loop:false,
+		nav:false,
+		dots:false,
+		margin:10,
+		mouseDrag:true,
+		touchDrag:true,
+		responsive:{
+			768:{
+				items:3
+			},
+			320:{
+				items:1
+			}
+		}
+    });
+});
 
-function closeRightMenu() {
-    // document.getElementById("rightMenu").style.display = "none";
-}
 $(document).ready(function () {
     slide_Show();
     show_Fillter();

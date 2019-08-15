@@ -1,120 +1,131 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- include head.html -->
-  @@include('../layouts/head.html', {
+    <!-- include head.html -->
+    @@include('../layouts/head.html', {
     "title": "HTML"
-  })
-  <!-- include styles.html -->
-  @@include('../layouts/styles.html')
+})
+<!-- include styles.html -->
+@@include('../layouts/styles.html')
 </head>
 <body>
-  <div class="wrapper">
-    <!-- include banner.html -->
-    <!-- @@include('../partials/banner.html') -->
+    <div class="wrapper">
+        <!-- include banner.html -->
+        <!-- @@include('../partials/banner.html') -->
 
-    <main class="main-container">
-      <div class="container_main" id="container_main">
-        <div class="ovelay_menu"></div>
-        <div class="main_sidenav main_sidenav_block main_sidenav_card main_sidenav_animate_right" id="rightMenu">
-          <div class="main_sidenav_info">
-            <button onclick="" class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large" id="close_menu"><i class="fas fa-times"></i></button>
-          </div>
-        </div>
-        <header class="main_header">
-          <nav class="navbar navbar-expand-lg navbar-light nar_custom" style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
-            <a class="navbar-brand icon_logo" href="#">
-              <img src="images/icon/icon_logo.png">
-            </a>
-            <div class="navbar-nav m-auto">
-              <span class="title_header">패키지모아</span> 
-            </div>
-            <span class="btn_sidenav" onclick="openRightMenu()">
-              <i class="fas fa-align-right"></i>
-            </span>
-          </nav>
-          <div class="logo_banner">
-            <img src="images/icon/banner_logo.png">
-          </div>
-        </header>  
-        <section class="container-fluid">
-          <div class="form-search">
-            <div class="row">
-              <div class="col-6">
-                <div class="control_form_search input_control_left">
-                  <input type="text" placeholder="어디로 떠날까요?" name="" class="input_key_search">
+        <main class="main-container">
+            <div class="container_main" id="container_main">
+                <div class="ovelay_menu"></div>
+                <div class="main_sidenav main_sidenav_block main_sidenav_card main_sidenav_animate_right" id="rightMenu">
+                    <div class="main_sidenav_info">
+                        <button onclick="" class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large" id="close_menu"><i class="fas fa-times"></i></button>
+                        <div class="main_sidenav_login">
+                            <span class="btn_login">
+                                카카오로 로그인
+                            </span>
+                            <div class="info_user">
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_sidenav_content">
+                        <ul>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                           <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-              <div class="col-6">
-                <div class="control_form_search input_control_right">
-                  <input type="text" placeholder="언제 떠날까요?" name="" class="input_key_search">
-                </div>
-              </div>
+                @@include('../layouts/header.html')
+                <section class="container-fluid">
+                    <div class="form-search">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="control_form_search input_control_left">
+                                    <input type="text" placeholder="어디로 떠날까요?" name="" class="input_key_search">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="control_form_search input_control_right">
+                                    <input type="text" placeholder="언제 떠날까요?" name="" class="input_key_search">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list_tags_more">
+                        <ul class="scroll">
+                            <li><a class="" href="#">다낭 7월 22일</a></li>
+                            <li><a class=" " href="#">다낭 7월 22일 </a></li>
+                            <li><a class=" " href="#">다낭 7월 22일</a></li>
+                            <li><a class=" " href="#">다낭 7월 22일</a></li>
+                            <li><a class=" " href="#">다낭 7월 22일 </a></li>
+                            <li><a class=" " href="#">다낭 7월 22일 </a></li>
+                            <li><a class=" " href="#">다낭 7월 22일 </a></li>
+                            <li><a class=" " href="#">다낭 7월 22일 </a></li>
+                            <li><a class=" " href="#">다낭 7월 22일 </a></li>
+                        </ul>
+                    </div>
+                    <div class="banner">
+                        <a href="">
+                            <img src="images/icon/banner-1.png">
+                        </a>
+                    </div>
+                    <div class="banner">
+                        <a href="">
+                            <img src="images/icon/banner-2.png">
+                        </a>
+                    </div>
+                    <div class="owl-carousel owl-theme show_local" id="show_local">
+                        <div class="item list_item">
+                            <img src="images/background/africa.png">
+                            <h4 class="main_title"><a href="">아시아1</a></h4>
+                        </div>
+                        <div class="item list_item">
+                            <img src="images/background/chaua.png">
+                            <h4 class="main_title"><a href="">아시아2</a></h4>
+                        </div>
+                        <div class="item list_item">
+                            <img src="images/background/namthaibinhduong.png">
+                            <h4 class="main_title"><a href="">아시아3</a></h4>
+                        </div>
+                        <div class="item list_item">
+                            <img src="images/background/chauau.png">
+                            <h4 class="main_title"><a href="">아시아4</a></h4>
+                        </div>
+                        <div class="item list_item">
+                            <img src="images/background/chaumy.png">
+                            <h4 class="main_title"><a href="">아시아5</a></h4>
+                        </div>
+                    </div>
+                </section>
+                <footer class="main_footer">
+                    @@include('../layouts/footer.html')
+                </footer>
             </div>
-          </div>
-          <div class="list_tags_more">
-            <ul class="">
-              <li><a class="" href="#">다낭 7월 22일</a></li>
-              <li><a class=" " href="#">다낭 7월 22일 </a></li>
-              <li><a class=" " href="#">다낭 7월 22일</a></li>
-              <li><a class=" " href="#">다낭 7월 22일</a></li>
-              <li><a class=" " href="#">다낭 7월 22일 </a></li>
-              <li><a class=" " href="#">다낭 7월 22일 </a></li>
-              <li><a class=" " href="#">다낭 7월 22일 </a></li>
-              <li><a class=" " href="#">다낭 7월 22일 </a></li>
-              <li><a class=" " href="#">다낭 7월 22일 </a></li>
-            </ul>
-          </div>
-          <div class="banner">
-            <a href="">
-              <img src="images/icon/banner-1.png">
-            </a>
-          </div>
-          <div class="banner">
-            <a href="">
-              <img src="images/icon/banner-2.png">
-            </a>
-          </div>
-          <div class="owl-carousel owl-theme show_local" id="show_local">
-            <div class="item list_item">
-              <img src="images/background/du-lich-canada-buc-tranh-mua-thu-tuyet-dep-tren-nhung-canh-rung-la-phong-1507081771.png">
-              <h4 class="main_title"><a href="">아시아1</a></h4>
-            </div>
-            <div class="item list_item">
-              <img src="images/background/africa.png">
-              <h4 class="main_title"><a href="">아시아2</a></h4>
-            </div>
-            <div class="item list_item">
-              <img src="images/background/africa.png">
-              <h4 class="main_title"><a href="">아시아3</a></h4>
-            </div>
-            <div class="item list_item">
-              <img src="images/background/du-lich-canada-buc-tranh-mua-thu-tuyet-dep-tren-nhung-canh-rung-la-phong-1507081771.png">
-              <h4 class="main_title"><a href="">아시아4</a></h4>
-            </div>
-            <div class="item list_item">
-              <img src="images/background/du-lich-canada-buc-tranh-mua-thu-tuyet-dep-tren-nhung-canh-rung-la-phong-1507081771.png">
-              <h4 class="main_title"><a href="">아시아5</a></h4>
-            </div>
-            <div class="item list_item">
-              <img src="images/background/du-lich-canada-buc-tranh-mua-thu-tuyet-dep-tren-nhung-canh-rung-la-phong-1507081771.png">
-              <h4 class="main_title"><a href="">아시아6</a></h4>
-            </div>
-    
-          </div>
-        </section>
-        <footer class="main_footer">
-          
-        </footer>
-      </div>
-    </main>
+        </main>
 
-    <!-- include footer.html -->
-    <!-- @@include('../layouts/footer.html') -->
-  </div>
+        <!-- include footer.html -->
+    </div>
 
-  <!-- include scripts.html -->
-  @@include('../layouts/scripts.html')
-  
+    <!-- include scripts.html -->
+    @@include('../layouts/scripts.html')
+
 </body>
 </html>
