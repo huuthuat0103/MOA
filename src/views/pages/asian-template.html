@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- include head.html -->
+    @@include('../layouts/head.html', {
+    "title": "HTML"
+    })
+    <!-- include styles.html -->
+    @@include('../layouts/styles.html')
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- include banner.html -->
+        <!-- @@include('../partials/banner.html') -->
+
+        <main class="main-container">
+            <div class="container_main" id="container_main">
+                <div class="ovelay_menu"></div>
+                <div class="main_sidenav main_sidenav_block main_sidenav_card main_sidenav_animate_right"
+                    id="rightMenu">
+                    <div class="main_sidenav_info">
+                        <button onclick="" class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large"
+                            id="close_menu"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <header class="main_header">
+                    <nav class="navbar navbar-expand-lg navbar-light nar_custom"
+                        style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
+                        <a class="navbar-brand icon_logo" href="#">
+                            <img src="images/icon/icon_logo.png">
+                        </a>
+                        <div class="navbar-nav m-auto">
+                            <span class="title_header">아시아</span>
+                        </div>
+                        <span class="btn_sidenav" onclick="openRightMenu()">
+                            <i class="fas fa-align-right"></i>
+                        </span>
+                    </nav>
+                </header>
+                <section class="container-fuild">
+                    <div class="asian-template">
+                        <div class="top">
+                            <div class="left">
+                                <button class="btn btn-asia">아시아</button>
+                            </div>
+                            <div class="right">
+                                <button class="btn btn-goto">언제 떠날까요?</button>
+                                <button class="btn btn-goto">
+                                    <i class="fas fa-user-alt"></i>
+                                    <span class="ml-1">1</span>
+                                </button>
+                                <button class="btn btn-goto">출발지</button>
+                            </div>
+                        </div>
+                        <div class="form-search">
+                            <form action="">
+                                <div class="row align-items-center">
+                                    <div class="col-2 pr-0">
+                                        <button class="btn btn-filter">
+                                            <i class="fas fa-filter"></i>
+                                            <span class="ml-1"> 필터</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-8 pr-0">
+                                        <div class="search-fiiter">
+                                            <input type="text" placeholder="Search..." name="" class="input_key_search">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn btn-sort">
+                                            <i class="fas fa-sort-amount-down"></i>
+                                            <span class="ml-1"> 정렬</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-group">
+                            <div class="row mb-4">
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="img-thumnail">
+                                            <a href="">
+                                                <img src="./images/background/image-card-01.png" alt="" class="w-100">
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="title mb-4">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                            <p class="mb-2">하나투어</p>
+                                            <p class="mb-0">8.7~11일 3박5일 </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="left">
+                                                <p class="tetx">
+                                                    티웨이 항공
+                                                    <img src="./images/icon/logo-tw.png" alt="">
+                                                </p>
+                                            </div>
+                                            <div class="right">
+                                                <p>
+                                                    <span>200,000</span>
+                                                    원
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="img-thumnail">
+                                            <a href="">
+                                                <img src="https://znews-photo.zadn.vn/w1024/Uploaded/pwvopivp/2019_08_13/1.jpeg"
+                                                    alt="" class="w-100">
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="title mb-4">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                            <p class="mb-2">하나투어</p>
+                                            <p class="mb-0">8.7~11일 3박5일 </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="left">
+                                                <p class="text">
+                                                    티웨이 항공
+                                                    <img src="./images/icon/logo-tw.png" alt="">
+                                                </p>
+                                            </div>
+                                            <div class="right">
+                                                <p>
+                                                    <span>200,000</span>
+                                                    원
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="img-thumnail">
+                                            <a href="">
+                                                <img src="./images/background/image-card-01.png" alt="" class="w-100">
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="title mb-4">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                            <p class="mb-2">하나투어</p>
+                                            <p class="mb-0">8.7~11일 3박5일 </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="left">
+                                                <p class="tetx">
+                                                    티웨이 항공
+                                                    <img src="./images/icon/logo-tw.png" alt="">
+                                                </p>
+                                            </div>
+                                            <div class="right">
+                                                <p>
+                                                    <span>200,000</span>
+                                                    원
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="img-thumnail">
+                                            <a href="">
+                                                <img src="https://znews-photo.zadn.vn/w1024/Uploaded/pwvopivp/2019_08_13/1.jpeg"
+                                                    alt="" class="w-100">
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="title mb-4">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                            <p class="mb-2">하나투어</p>
+                                            <p class="mb-0">8.7~11일 3박5일 </p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="left">
+                                                <p class="text">
+                                                    티웨이 항공
+                                                    <img src="./images/icon/logo-tw.png" alt="">
+                                                </p>
+                                            </div>
+                                            <div class="right">
+                                                <p>
+                                                    <span>200,000</span>
+                                                    원
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="main_footer">
+
+                </footer>
+            </div>
+        </main>
+
+        <!-- include footer.html -->
+        <!-- @@include('../layouts/footer.html') -->
+    </div>
+
+    <!-- include scripts.html -->
+    @@include('../layouts/scripts.html')
+
+</body>
+
+</html>

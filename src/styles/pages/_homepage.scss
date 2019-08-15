@@ -50,7 +50,7 @@
   .container_main{
     width: 100%;
     min-width: 320px;
-    max-width: 720px;
+    max-width: 768px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -165,10 +165,12 @@
 .main_sidenav_block .main_sidenav_info .main_sidenav_item_button svg:hover{
 	cursor: pointer;
 }
-
+.btn_sidenav {
+  color: #9c2e92;
+}
 .navbar .title_header{
 	color: #9c2e92;
-	font-size: 23px;
+	font-size: px2em(29);
 	font-family: Malgun Gothic;
 }
 

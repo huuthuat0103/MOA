@@ -225,3 +225,8 @@
 /* @include breakpoint(lores) {
 
 } */
+
+$base-font-size:14;
+@function px2em($pxsize) {
+  @return ($pxsize/$base-font-size)+em;
+}

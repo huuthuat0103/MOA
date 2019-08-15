@@ -18,7 +18,3 @@ $color-black: #000;
 $color_tooptip: #CD302D;
 $checkbox-bg: #24146f;
 /*Color - end*/
-
-@function px2em($pxsize) {
-    @return ($pxsize/$base-font-size)+em;
-}
