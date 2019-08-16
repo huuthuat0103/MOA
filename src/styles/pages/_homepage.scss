@@ -115,6 +115,7 @@ $background_color_2: inherit;
     position: relative;
     display: flex;
     flex-direction: row;
+    align-items: center;
     &:before {
       content: '';
       background-repeat: no-repeat;
@@ -349,6 +350,7 @@ $background_color_2: inherit;
           -webkit-transition: all .3s ease-in-out 0s;
           -o-transition: all .3s ease-in-out 0s;
           transition: all .3s ease-in-out 0s;
+          font-size: 20px;
           &:hover {
             color: $color_3;
         }
@@ -463,6 +465,20 @@ $background_color_2: inherit;
                         color: $color_2;
                     }
                 }
+            }
+        }
+    }
+
+    .main_footer{
+
+        .contact{
+
+            .conttact_title{
+                font-size: 15px;
+            }
+
+            .contact_qa{
+                font-size: 12px;
             }
         }
     }
