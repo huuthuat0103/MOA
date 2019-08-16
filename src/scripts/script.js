@@ -1,21 +1,21 @@
 
-$(document).ready(function(){
+$(document).ready(function () {
     var owl = $('#show_local');
-	owl.owlCarousel({
-		loop:false,
-		nav:false,
-		dots:false,
-		margin:10,
-		mouseDrag:true,
-		touchDrag:true,
-		responsive:{
-			768:{
-				items:3
-			},
-			320:{
-				items:1
-			}
-		}
+    owl.owlCarousel({
+        loop: false,
+        nav: false,
+        dots: false,
+        margin: 10,
+        mouseDrag: true,
+        touchDrag: true,
+        responsive: {
+            768: {
+                items: 3
+            },
+            320: {
+                items: 1
+            }
+        }
     });
 });
 
@@ -123,19 +123,30 @@ function slide_Show() {
 }
 function show_Fillter() {
     // console.log();
-    var WID_SCREEN = $(window).width()
-    var get_fitter = $('#get_fitter');
-    var hide_fitter = $('#hide_fitter');
+    var CONTROLFILLTER = {
+        main_LEFT: $('#container_main').offset().left,
+        WID_SCREEN: $('#container_main').width(),
+        get_fitter: $('#get_fitter'),
+        hide_fitter: $('#hide_fitter')
+    }
+    $('.popup-fillter').css({
+        'left': CONTROLFILLTER.main_LEFT
+    });
 
-    get_fitter.click(function () {
+    console.log(CONTROLFILLTER.WID_SCREEN);
+
+    CONTROLFILLTER.get_fitter.click(function () {
         $('.popup-fillter').css({
-            'left': '0',
+            'opacity': 1,
+            'z-index': '2',
+            'width': CONTROLFILLTER.WID_SCREEN
         });
     });
-    hide_fitter.click(function () {
-        console.log(WID_SCREEN);
+    CONTROLFILLTER.hide_fitter.click(function () {
         $('.popup-fillter').css({
-            'left':  - WID_SCREEN,
+            'opacity': 0,
+            'z-index': '-1',
+            'width': 0
         });
     });
 
