@@ -1,0 +1,71 @@
+.wrapper_notification{
+	.bg_nofitication{
+		text-align: center;
+		margin: 0 auto;
+		img{
+			padding: 100px 0 40px 0;
+		}
+	}
+	.notification_content{
+		text-align: center;
+		margin: 0 auto;
+		.text_content{
+			padding: 0 50px;
+			margin-top: 70px;
+			h4{
+				text-align: left;
+				font-weight: 600;
+				font-size: 18px;
+				color:#454545;
+			}
+			textarea{
+				margin-bottom: 30px;
+			}
+		}
+		h4{
+			font-weight: 600;
+			margin-bottom: 30px;
+			color: #454545;
+			word-break: keep-all;
+
+		}
+		p{
+			padding: 0 190px;
+			color:#555555;
+			margin-bottom: 30px;
+			font-size: 18px;
+			font-weight: 400;
+			@media only screen and (max-width: 480px) {
+				padding: 0 10px;
+				font-size: 16px;
+			}
+			span{
+				a{
+					color:#f26122;
+				}
+			}
+		}
+		.reservation_history{
+			margin-bottom: 30px;
+			span{
+				background: #9c2e92;
+				color: #fff;
+				padding: 10px 0;
+				font-weight: 600;
+				border-radius: 5px;
+				cursor: pointer;
+				width: 70%;
+				margin: 0 auto;
+				display: block;
+				border: 1px solid #9c2e92;
+				@include transition-3;
+				&:hover,&:focus{
+					background: transparent;
+					color: #9c2e92;
+					border: 1px solid #9c2e92;
+				}
+			}
+		}
+		
+	}
+}

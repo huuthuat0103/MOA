@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- include head.html -->
+    @@include('../layouts/head.html', {
+    "title": "HTML"
+})
+<!-- include styles.html -->
+@@include('../layouts/styles.html')
+</head>
+<body>
+    <div class="wrapper">
+        <!-- include banner.html -->
+        <!-- @@include('../partials/banner.html') -->
+
+        <main class="main-container">
+            <div class="container_main" id="container_main">
+                <div class="ovelay_menu"></div>
+                <div class="main_sidenav main_sidenav_block main_sidenav_card main_sidenav_animate_right" id="rightMenu">
+                    <div class="main_sidenav_info">
+                        <button class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large" id="close_menu"><i class="fas fa-times"></i></button>
+                        <div class="main_sidenav_login">
+                            <span class="btn_login">
+                                카카오로 로그인
+                            </span>
+                            <div class="info_user">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_sidenav_content">
+                        <ul>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">위시리스트</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">예약 내역</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">문의</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <header class="main_header">
+                    <nav class="navbar navbar-expand-lg navbar-light nar_custom" style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
+                        <a class="navbar-brand icon_logo" href="#">
+                            <img src="images/icon/icon_logo.png">
+                        </a>
+                        <div class="navbar-nav m-auto">
+                            <span class="title_header">패키지모아</span> 
+                        </div>
+                        <span class="btn_sidenav">
+                            <img src="../../images/icon/bullet_hambuger.png">
+                        </span>
+                    </nav>
+                </header>  
+                <section>
+                    <div class="wrapper_schedule">
+                        <div class="card">
+                            <div class="card-title schedule_title">
+                                <span>다른 출발일 보기</span>
+                            </div>
+                            <div class="card-body schedule_content">
+                                <div class="schedule_information">
+                                    <form>
+                                        <ul>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">남은좌석</span>
+                                                    <label for="name">8명</label>
+                                                    <p>현재예약 0명 (최소인원 2명)</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">쇼핑</span>
+                                                    <p>1회</p>
+                                                </div>
+                                                <div class="form_row_center">
+                                                    <span class="title_header">현지필수경비</span>
+                                                    <p>USD 30</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">여행세부일정</span>
+                                                </div>
+                                                <div class="form_row_right">
+                                                    <span class="btn_detail">보기</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">여행세부일정</span>
+                                                </div>
+                                                <div class="form_row_right">
+                                                    <span class="btn_detail">세정보 참조</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">여행세부일정</span>
+                                                </div>
+                                                <div class="form_row_right">
+                                                    <span class="btn_detail">세정보 참조</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">여행세부일정</span>
+                                                </div>
+                                                <div class="form_row_right">
+                                                    <span class="btn_detail">세정보 참조</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">여행세부일정</span>
+                                                </div>
+                                                <div class="form_row_right">
+                                                    <span class="btn_detail">세정보 참조</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">여행세부일정</span>
+                                                    <span class="sub_title">온라인투어</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_left">
+                                                    <span class="title_header">여행세부일정</span>
+                                                    <span class="sub_title">1907 2216 0006</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form_row_center">
+                                                    <img src="../../images/icon/bullet_message.png"> <span>1:1 문의</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-title schedule_title">
+                                <span>공유하기</span>
+                            </div>
+                            <div class="card-body schedule_content">
+                                <p>
+                                    본 여행상품의 주관여행사는 ‘온라인투어'입니다.좌석상태 및 요금은 여행사의 정책변경 및 환율 변경에 따라 실시간 변경되므로 상품정보에 차이가 있을수 있습니다트립스토어는 통신판매중개자로 여행상품 검색 결과 및 구매에 대한 별도의 책임을 지지 않으며 예약, 결제, 취소 등에 대한 사항은 해당여행사로 문의하시기 바랍니다.현재 화면의 여행 사진은 ‘온라인투어’에서 제공하였습니다.상품정보가 잘못되었다면 여기를 눌러주세요.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule_price">
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="price">200,000원</span>
+                                <p>온라인투어</p>
+                            </div>
+                            <div class="col-6 schedule_btn_order">
+                                <span class="btn_order">
+                                    예약하기
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="main_footer">
+                    @@include('../layouts/footer.html')
+                </footer>
+            </div>
+        </main>
+
+        <!-- include footer.html -->
+    </div>
+
+    <!-- include scripts.html -->
+    @@include('../layouts/scripts.html')
+
+</body>
+</html>
