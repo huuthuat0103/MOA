@@ -35,6 +35,7 @@
 <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
 <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
 
 </head>
 
@@ -51,22 +52,53 @@
                     <div class="main_sidenav_info">
                         <button onclick="" class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large"
                             id="close_menu"><i class="fas fa-times"></i></button>
+                        <div class="main_sidenav_login">
+                            <span class="btn_login">
+                                카카오로 로그인
+                            </span>
+                            <div class="info_user">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_sidenav_content">
+                        <ul>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색 </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <header class="main_header">
-                    <nav class="navbar navbar-expand-lg navbar-light nar_custom"
-                        style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
-                        <a class="navbar-brand icon_logo" href="#">
-                            <img src="images/icon/icon_logo.png">
-                        </a>
-                        <div class="navbar-nav m-auto">
-                            <span class="title_header">아시아</span>
-                        </div>
-                        <span class="btn_sidenav" onclick="openRightMenu()">
-                            <i class="fas fa-align-right"></i>
-                        </span>
-                    </nav>
-                </header>
+    <nav class="navbar navbar-expand-lg navbar-light nar_custom" style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
+        <a class="navbar-brand icon_logo" href="#">
+            <img src="images/icon/icon_logo.png">
+        </a>
+        <div class="navbar-nav m-auto">
+            <span class="title_header">패키지모아</span> 
+        </div>
+        <span class="btn_sidenav">
+            <img src="../../images/icon/bullet_hambuger.png">
+        </span>
+    </nav>
+</header>  
                 <section class="container-fuild">
                     <div class="asian-template">
                         <div class="top">
@@ -82,32 +114,623 @@
                                 <button class="btn btn-goto">출발지</button>
                             </div>
                         </div>
-                        <div class="form-search">
-                            <form action="">
-                                <div class="row align-items-center">
-                                    <div class="col-2 pr-0">
-                                        <button class="btn btn-filter">
-                                            <i class="fas fa-filter"></i>
-                                            <span class="ml-1"> 필터</span>
-                                        </button>
-                                    </div>
-                                    <div class="col-8 pr-0">
-                                        <div class="search-fiiter">
-                                            <input type="text" placeholder="Search..." name="" class="input_key_search">
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sort">
-                                            <i class="fas fa-sort-amount-down"></i>
-                                            <span class="ml-1"> 정렬</span>
-                                        </button>
+                        <div class="main_box_search">
+                            <div class="box_sum box_left">
+                                <button class="btn_control btn-filter" id="get_fitter" type="button" data-toggle="modal"
+                                    data-target="#exampleModalCenter">
+                                    <i class="fas fa-filter"></i>
+                                    <span class="ml-1"> 필터</span>
+                                </button>
+                            </div>
+                            <div class="box_sum box_ceter">
+                                <div class="search-fiiter">
+                                    <input type="text" placeholder="Search..." name="" class="input_key_search">
+                                    <button class="btn btn-search">
+                                        <img src="./images/icon/bullet_search.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="box_sum box_right">
+                                <button class="btn_control btn-sort">
+                                    <i class="fas fa-sort-amount-down"></i>
+                                    <span class="ml-1"> 정렬</span>
+                                </button></div>
+                        </div>
+                        <!-- popup -->
+                        <div class="popup-fillter">
+                            <div class="header-popup">
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-end">
+                                        <span class="btnds " id="hide_fitter">
+                                            <i class="fas fa-times"></i>
+                                        </span>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="content-popup">
+                                <div class="title">
+                                    <h4 class="text-center">
+                                        <i class="fas fa-filter"></i>
+                                        검색필터
+                                    </h4>
+                                </div>
+                                <div class="content">
+                                    <div class="list-item">
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample1">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne12">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOne" aria-expanded="true"
+                                                                aria-controls="collapseOne">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="fas fa-gift"></i>
+                                                                    </span>
+                                                                    특전
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample1">
+                                                        <div class="box-body">
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline" checked>
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline">
+                                                                    <span class="label-text">
+                                                                        전일정 1급호텔
+                                                                    </span>
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline2" checked>
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline2"><span
+                                                                        class="label-text">3대특식포함</span>
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline1">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline1"><span class="label-text">
+                                                                        유럽3대야경포함
+                                                                    </span>
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample3">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne3">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOne3" aria-expanded="true"
+                                                                aria-controls="collapseOne3">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="far fa-calendar-alt"></i>
+                                                                    </span>
+                                                                    기간
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOne3" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample3">
+                                                        <div class="box-body">
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInlinex">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInlinex"><span class="label-text">
+                                                                        전체
+                                                                    </span>
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline2x">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline2x"><span
+                                                                        class="label-text">
+                                                                        9일이하
+                                                                    </span>
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline1x">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline1x"><span
+                                                                        class="label-text">
+                                                                        10일 이상
+                                                                    </span>
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample12">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne2">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOne1" aria-expanded="true"
+                                                                aria-controls="collapseOne1">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="fas fa-user-alt"></i>
+                                                                    </span>
+                                                                    인원수
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOne1" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample12">
+                                                        <div class="box-body">
+                                                            <div class="amount-list-item">
+                                                                <div class="amount-item">
+                                                                    <div class="left-item">
+                                                                        <p class="name">성인</p>
+                                                                        <p>만 12세 이상</p>
+                                                                    </div>
+                                                                    <div class="right-item">
+                                                                        <span class="up-to"></span>
+                                                                        <span class="number">1</span>
+                                                                        <span class="down"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="amount-item">
+                                                                    <div class="left-item">
+                                                                        <p class="name">아동</p>
+                                                                        <p>만 12세 이하</p>
+                                                                    </div>
+                                                                    <div class="right-item">
+                                                                        <span class="up-to"></span>
+                                                                        <span class="number">1</span>
+                                                                        <span class="down"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="amount-item">
+                                                                    <div class="left-item">
+                                                                        <p class="name">소아</p>
+                                                                        <p>만 2세 이하</p>
+                                                                    </div>
+                                                                    <div class="right-item">
+                                                                        <span class="up-to"></span>
+                                                                        <span class="number">1</span>
+                                                                        <span class="down"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample23">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOne2" aria-expanded="true"
+                                                                aria-controls="collapseOne2">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="far fa-clipboard"></i>
+                                                                    </span>
+                                                                    상품가
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOne2" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample23">
+                                                        <div class="box-body">
+                                                            <div class="price-product">
+                                                                <div class="title-text">
+                                                                    <span class="text-left">
+                                                                        2,500,000~3,000,000
+                                                                    </span>
+                                                                    <span class="text-center">
+                                                                        20개
+                                                                    </span>
+                                                                </div>
+                                                                <div class="price-number">
+                                                                    <div class="price-center">
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cheap-price">
+                                                                    <ul class="list-cheap">
+                                                                        <li class="item-cheap">
+                                                                            <p>실속가
+                                                                            </p>
+                                                                            <p class="text-number">1,200,000원
+                                                                            </p>
+                                                                        </li>
+                                                                        <li class="item-cheap">
+                                                                            <p>가성비 </p>
+                                                                            <p class="text-number">2,500,000원</p>
+                                                                        </li>
+                                                                        <li class="item-cheap">
+                                                                            <p>품격
+                                                                            </p>
+                                                                            <p class="text-number">5,000,000원
+                                                                            </p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample34">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne13">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOnet" aria-expanded="true"
+                                                                aria-controls="collapseOnet">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="far fa-address-book"></i>
+                                                                    </span>
+                                                                    예약상태
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOnet" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample34">
+                                                        <div class="box-body">
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInlinet">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInlinet">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline2t">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline2t">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline1t">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline1t">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample11">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne1">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOner" aria-expanded="true"
+                                                                aria-controls="collapseOner">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="fas fa-user-secret"></i>
+                                                                    </span>
+                                                                    여행사
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOner" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample11">
+                                                        <div class="box-body">
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInliner">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInliner">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline2r">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline2r">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline1r">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline1r">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample22">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne14">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOnee" aria-expanded="true"
+                                                                aria-controls="collapseOnee">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="fas fa-plane"></i>
+                                                                    </span>
+                                                                    항공
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOnee" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample22">
+                                                        <div class="box-body">
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInlinee">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInlinee">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline2e">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline2e">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline1e">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline1e">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample33">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne15">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOnew" aria-expanded="true"
+                                                                aria-controls="collapseOnew">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="fas fa-map-marker-alt"></i>
+                                                                    </span>
+                                                                    특전
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOnew" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample33">
+                                                        <div class="box-body">
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInlinew">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInlinew">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline2w">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline2w">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline1w">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline1w">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="accordion" id="accordionExample44">
+                                                <div class="box">
+                                                    <div class="box-header" id="headingOne16">
+                                                        <h4 class="mb-0">
+                                                            <div class="btn-item" data-toggle="collapse"
+                                                                data-target="#collapseOneq" aria-expanded="true"
+                                                                aria-controls="collapseOneq">
+                                                                <p class="mb-0 left">
+                                                                    <span class="icon-box">
+                                                                        <i class="fas fa-cart-arrow-down"></i>
+                                                                    </span>
+                                                                    쇼핑
+                                                                </p>
+                                                                <p class="mb-0">
+                                                                    <img src="./images/icon/icon-up.png" alt="">
+                                                                </p>
+                                                            </div>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOneq" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#accordionExample44">
+                                                        <div class="box-body">
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInlineq">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInlineq">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline2q">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline2q">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                                <input type="checkbox" class="custom-control-input"
+                                                                    id="customControlInline1q">
+                                                                <label class="custom-control-label text"
+                                                                    for="customControlInline1q">Remember my
+                                                                    preference
+                                                                    <span class="amount">
+                                                                        10개
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-popup">
+                                <div class="gr-button">
+                                    <button class="btn-left btn">초기화 </button>
+                                    <button class="btn-right btn">100개의 결과 보기 </button>
+                                </div>
+                            </div>
                         </div>
+                        <!-- end -->
                         <div class="card-group">
                             <div class="row mb-4">
-                                <div class="col-6">
+                                <div class="col-sm-6">
                                     <div class="card">
                                         <div class="img-thumnail">
                                             <a href="">
@@ -115,7 +738,11 @@
                                             </a>
                                         </div>
                                         <div class="card-content">
-                                            <h4 class="title mb-4">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                            <h4 class="title mb-4">
+                                                <a href="">
+                                                    다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회
+                                                </a>
+                                            </h4>
                                             <p class="mb-2">하나투어</p>
                                             <p class="mb-0">8.7~11일 3박5일 </p>
                                         </div>
@@ -123,7 +750,7 @@
                                             <div class="left">
                                                 <p class="tetx">
                                                     티웨이 항공
-                                                    <img src="./images/icon/logo-tw.png" alt="">
+                                                    <a href=""><img src="./images/icon/logo-tw.png" alt=""></a>
                                                 </p>
                                             </div>
                                             <div class="right">
@@ -135,7 +762,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-sm-6">
                                     <div class="card">
                                         <div class="img-thumnail">
                                             <a href="">
@@ -144,7 +771,11 @@
                                             </a>
                                         </div>
                                         <div class="card-content">
-                                            <h4 class="title mb-4">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                            <h4 class="title mb-4">
+                                                <a href="">
+                                                    다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회
+                                                </a>
+                                            </h4>
                                             <p class="mb-2">하나투어</p>
                                             <p class="mb-0">8.7~11일 3박5일 </p>
                                         </div>
@@ -152,7 +783,7 @@
                                             <div class="left">
                                                 <p class="text">
                                                     티웨이 항공
-                                                    <img src="./images/icon/logo-tw.png" alt="">
+                                                    <a href=""><img src="./images/icon/logo-tw.png" alt=""></a>
                                                 </p>
                                             </div>
                                             <div class="right">
@@ -166,7 +797,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-sm-6">
                                     <div class="card">
                                         <div class="img-thumnail">
                                             <a href="">
@@ -174,7 +805,11 @@
                                             </a>
                                         </div>
                                         <div class="card-content">
-                                            <h4 class="title mb-4">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                            <h4 class="title mb-4">
+                                                <a href="">
+                                                    다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회
+                                                </a>
+                                            </h4>
                                             <p class="mb-2">하나투어</p>
                                             <p class="mb-0">8.7~11일 3박5일 </p>
                                         </div>
@@ -182,7 +817,7 @@
                                             <div class="left">
                                                 <p class="tetx">
                                                     티웨이 항공
-                                                    <img src="./images/icon/logo-tw.png" alt="">
+                                                    <a href=""><img src="./images/icon/logo-tw.png" alt=""></a>
                                                 </p>
                                             </div>
                                             <div class="right">
@@ -194,7 +829,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-sm-6">
                                     <div class="card">
                                         <div class="img-thumnail">
                                             <a href="">
@@ -203,7 +838,11 @@
                                             </a>
                                         </div>
                                         <div class="card-content">
-                                            <h4 class="title mb-4">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                            <h4 class="title mb-4">
+                                                <a href="">
+                                                    다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회
+                                                </a>
+                                            </h4>
                                             <p class="mb-2">하나투어</p>
                                             <p class="mb-0">8.7~11일 3박5일 </p>
                                         </div>
@@ -211,7 +850,7 @@
                                             <div class="left">
                                                 <p class="text">
                                                     티웨이 항공
-                                                    <img src="./images/icon/logo-tw.png" alt="">
+                                                    <a href=""><img src="./images/icon/logo-tw.png" alt=""></a>
                                                 </p>
                                             </div>
                                             <div class="right">
@@ -228,13 +867,25 @@
                     </div>
                 </section>
                 <footer class="main_footer">
-
+                    <footer class="footer-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+      	<div class="contact">
+      		<p class="conttact_title">문의하기 | 이용약관 | 개인정보 처리방침 </p>
+      		<p class="contact_qa">상호명 : 패키지모아 | 대표 : 송민근 | 대표번호 : 1644-0971</p>
+      		<p class="contact_qa">문의 : sminkeun@naver.com | 운영시간 : 평일 09:30 ~ 18:30</p>
+      	</div>
+      </div>
+    </div>
+  </div>
+</footer>
                 </footer>
             </div>
         </main>
 
         <!-- include footer.html -->
-        
+
     </div>
 
     <!-- include scripts.html -->

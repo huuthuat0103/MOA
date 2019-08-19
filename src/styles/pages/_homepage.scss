@@ -54,7 +54,12 @@ $color_4: #787878;
 $font_family_1: Malgun Gothic;
 $background_color_1: #9c2e92;
 $background_color_2: inherit;
-
+.nar_custom {
+    position: fixed !important;
+    max-width: 768px;
+    width: 100%;
+    z-index: 9;
+}
 .container_main {
     width: 100%;
     min-width: 320px;
