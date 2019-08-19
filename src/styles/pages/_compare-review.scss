@@ -1,0 +1,105 @@
+.compare-review {
+    padding: 0 50px;
+    background: #f3f3f3;
+    padding-bottom: 20px;
+    .title-compare {
+        padding: 25px 0;
+
+        h4{
+            color: #000;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .content-compare {
+        .box-item {
+            display: flex;
+            justify-content: space-between;
+            .item {
+                width: 48%;
+                background: #fff;
+                border-radius: 10px;
+                .top-item {
+                    padding: 40px 30px;
+                    border-bottom: 1px solid #e5e5e5;
+
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+
+                    .date-time {
+                        h4{
+                            font-size: 18px;
+                            color: #6b6b6b;
+                            font-weight: bold;
+                            margin-top: 30px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .text-box {
+                    padding: 0 15px;
+                    .text-item {
+                        text-align: center;
+
+                        .title-text {
+                            color: #b579b0;
+                            font-size: 18px;
+                            font-weight: bold;
+                            margin-top: 30px;
+                            margin-bottom: 20px;
+                        }
+                        
+                        p {
+                            font-size: 18px;
+                            color: #777777;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .gr-button {
+                    padding: 0 20px;
+                    margin-top: 20px;
+
+                    button {
+                        width: 100%;
+                        margin-bottom: 15px;
+                        height: 46px;
+                        @include transition-3;
+                    }
+
+                    .btn-detail {
+                        background: transparent;
+                        border: 1px solid #9c2e92;
+                        color: #9c2e92;
+                        font-weight: bold;
+                        font-size: 18px;
+
+                        &:hover, &:focus {
+                            background: #9c2e92;
+                            color: #fff;
+                        }
+                    }
+
+                    .btn-before {
+                        background: #9c2e92;
+                        border: 1px solid #9c2e92;
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 18px;
+
+                        &:hover, &:focus {
+                            background: transparent;
+                            color: #9c2e92;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

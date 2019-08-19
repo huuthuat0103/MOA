@@ -1,0 +1,209 @@
+.box-whish-list {
+  padding: 0 16px;
+  .item-whish-list {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    @media screen and (max-width: 480px) {
+      padding: 15px 0;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    .check-item {
+      .custom-checkbox .custom-control-label::before {
+        border-radius: 3px;
+        width: 25px;
+        height: 25px;
+        left: -2em;
+        top: 0;
+
+        @media screen and (max-width: 480px) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .custom-control-input:checked ~ .custom-control-label::before {
+        background: #9c2e92;
+        border-color: #9c2e92;
+      }
+
+      .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+        background-image: none;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        left: -2em;
+
+        @media screen and (max-width: 480px) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .image-box {
+      img {
+        width: 245px;
+        height: 190px;
+        border-radius: 15px;
+
+        @media screen and (max-width: 480px) {
+          width: 100px;
+          height: 94px;
+        }
+
+        &:hover, &:focus {
+          background: #454545;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .content-box {
+      margin-left: 25px;
+
+      .title-box {
+        h4 {
+          font-size: 24px;
+          font-weight: bold;
+          color: #6b6b6b;
+          margin-bottom: 20px;
+
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+            margin-bottom: 10px;
+          }
+
+          @media screen and (max-width: 375px) {
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+
+          &:hover, &:focus {
+            color: #9c2e92;
+          }
+        }
+      }
+
+      .tour-name {
+        h6 {
+          font-size: 18px;
+          color: #5e5e5e;
+          font-weight: 600;
+
+          @media screen and (max-width: 480px) {
+            font-size: 14px;
+          }
+
+          @media screen and (max-width: 375px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .time-date {
+        h6 {
+          font-size: 18px;
+          color: #5e5e5e;
+          font-weight: 600;
+
+        @media screen and (max-width: 480px) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: 375px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .footer-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .price {
+          color: #9c2e92;
+          font-size: 18px;
+          font-weight: bold;
+
+          @media screen and (max-width: 480px) {
+            font-size: 14px;
+          }
+
+          @media screen and (max-width: 375px) {
+            font-size: 12px;
+          }
+        }
+
+        .logo-tway p {
+          color: #000;
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 0;
+
+          @media screen and (max-width: 480px) {
+            font-size: 14px;
+          }
+
+          @media screen and (max-width: 375px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gr-btn-whish {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 16px;
+    font-size: 18px;
+
+    @media screen and (max-width: 375px) {
+       padding: 25px 16px;
+      }
+
+    button {
+        width: 48%;
+        height: 46px;
+        font-size: 18px;
+        @media screen and (max-width: 375px) {
+            height: 36px;
+            font-size: 14px;
+          }
+    }
+
+    .btn-compare {
+        background: #9c2e92;
+        border: 1px solid #9c2e92;
+        color: #fff;
+        font-weight: bold;
+        @include transition-3;
+
+        &:hover, &:focus {
+            background: transparent;
+            color: #9c2e92;
+        }
+    }
+
+    .btn-delete {
+        background: transparent;
+        border: 1px solid #9c2e92;
+        color: #9c2e92;
+        font-weight: bold;
+        @include transition-3;
+
+        &:hover, &:focus {
+            background: #9c2e92;
+            color: #fff;
+        }
+    }
+}
