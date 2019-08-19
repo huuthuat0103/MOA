@@ -54,102 +54,288 @@ $color_3: #fff;
 $color_4: #787878;
 $color_5: #ffecfd;
 $font_size_1: 20px;
-$font_size_2: 15px;
+$font_size_2: 18px;
+$font_size_3: 16px;
+.schedule_breadcrumb{
+	margin-top: 60px;
+	position: relative;
+	text-align: center;
+	@media only screen and (max-width: 480px) {
+		img{
+			height: 250px;
+		}
+	}
+	@media only screen and (max-width: 320px) {
+		img{
+			height: 190px;
+		}
+	}
+
+	.breadcrumb_title{
+		color: $color_3;
+		position: absolute;
+		top: 60%;
+		right: 0;
+		left: 0;
+		font-size: 30px;
+		font-weight: 600;
+		@media only screen and (max-width: 480px) {
+			font-size: 16px;
+			top: 50%;
+		}
+		@media only screen and (max-width: 320px) {
+			font-size: 13px;
+		}
+	}
+}
 .wrapper_schedule{
 	padding: 20px;
 	background: #efefef;
-	.card{
-		margin-bottom: 20px;
-		border-radius: 15px;
-		border:1px solid #ccc;
-		box-shadow: 1px 1px 1px 1px #ebebeb;
-	}
-	.schedule_title{
-		border-bottom: 1px solid #d6d6d6;
-		text-align:center;
-		margin: 0 auto;
-		width: 100%;
-		padding: 10px 0;
-		span{
-			color: $color_1;
-			font-size: $font_size_1;
-			font-weight: 600;
+	.wrapper_schedule_content{
+		position: relative;
+		top: -80px;
+		@media only screen and (max-width: 480px) {
+			top: -70px;
 		}
-	}
-	.schedule_content{
-		background: #f8f8f8;
-		border-bottom-left-radius: 15px;
-		border-bottom-right-radius: 15px;
-		.schedule_information{
-			ul {
-				list-style-type: none;
-				padding: 0;
-				li{
-					&:last-child{
-						border: none;
-						span{
-							font-weight: 600;
-							padding: 5px;
-						}
-					}
-					padding: 15px 0;
+		.card{
+			margin-bottom: 20px;
+			border-radius: 15px;
+			border:1px solid #ccc;
+			.box_schedule{
+				ul{
+					list-style-type: none;
+					padding: 0;
+					margin-bottom: 0;
 					display: flex;
-					border-bottom: 1px solid #d6d6d6;
-					.form_row_center{
-						margin: 0 auto;
-						p{
-							margin-bottom: 0;
-							color: $color_4;
-							font-size: 14px;
-						}
+					justify-content: space-around;
+					text-align: center;
+					align-items: center;
+					@media only screen and (max-width: 480px) {
+						display: block;
 					}
-					.form_row_left{
-						p{
-							margin-bottom: 0;
-							color: $color_4;
-							font-size: 14px;
+					li{
+						align-items: center;
+						border: none;
+						padding: 10px;
+						display: flex;
+						float: left;
+						flex-direction: column;
+						@media only screen and (max-width: 480px) {
+							width: 50%;
 						}
-						label{
-							color:$color_2;
+						img{
+							margin-bottom: 10px;
+							width: 36px;
+							height: 36px;
+							@media only screen and (max-width: 480px) {
+								width: 30px;
+								height: 30px;
+							}
+						}
+						span{
+							font-size: $font_size_2;
 							font-weight: 600;
-						}
-						.sub_title{
-							color: $color_4;
-							font-size: 14px;
-							margin-left: 30px;
-							margin-right: auto;
-						}	
-					}
-					.form_row_right{
-						margin-left: auto;
-						p{
-							margin-bottom: 0;
-							color: $color_4;
-							font-size: 14px;
-						}
-						.btn_detail{
-							border: 1px solid $color_2;
-							background: $color_5;
-							color: $color_2;
-							padding: 5px 20px;
-							font-weight: 600;
-							border-radius: 5px;
-							cursor: pointer;
+							@media only screen and (max-width: 480px) {
+								font-size: 16px;
+							}
 							@media only screen and (max-width: 320px) {
-								padding: 5px 10px;
-							}
-							&:hover,&:focus{
-								background: $color_2;
-								color: $color_3;
+								font-size: 14px;
 							}
 						}
 					}
-					.title_header{
-						color: $color_1;
-						font-size: $font_size_2;
-						font-weight: 600;
-					}
+				}
+			}
+			.detail_schedule{
+				ul {
+					list-style-type: none;
+					padding: 0;
+					li{
+						align-items: center;
+						border: none;
+						padding: 15px 0;
+						display: flex;
+						.form_row_left{
+							p{
+								margin-bottom: 0;
+								color: $color_4;
+								font-size: 16px;
+								@media only screen and (max-width: 480px) {
+									font-size: 14px;
+								}
+							}
+							label{
+								color:$color_2;
+								font-weight: 600;
+							}
+							.sub_title{
+								color: $color_4;
+								font-size: 16px;
+								margin-left: 30px;
+								margin-right: auto;
+								@media only screen and (max-width: 480px) {
+									font-size: 14px;
+								}
+							}	
+						}
+						.form_row_center{
+							margin: 0 auto;
+							@media only screen and (max-width: 480px) {
+								margin: 0;
+								margin-left: auto;
+							}
+							p{
+								margin-bottom: 0;
+								color: $color_4;
+								font-size: 16px;
+								@media only screen and (max-width: 480px) {
+									font-size: 14px;
+								}
+							}
+						}
+						.form_row_right{
+							margin-left: auto;
+							text-align: right;
+							
+							.schedule_location{
+								color:$color_1;
+								font-weight: 600;
+							}
 
+							span{
+								font-weight: 500;
+								font-size: $font_size_2;
+								color: $color_2;
+							}
+							p{
+								margin-bottom: 0;
+								color: $color_4;
+								font-size: 16px;
+								@media only screen and (max-width: 480px) {
+									font-size: 14px;
+								}
+							}
+						}
+						.title_header{
+							color: $color_1;
+							font-size: $font_size_2;
+							font-weight: 600;
+							@media only screen and (max-width: 480px) {
+								font-size: 16px;
+							}
+						}
+
+					}
+				}
+			}
+			.schedule_title{
+				border-bottom: 1px solid #d6d6d6;
+				text-align:center;
+				margin: 0 auto;
+				width: 100%;
+				padding: 10px 0;
+				span{
+					color: $color_1;
+					font-size: $font_size_1;
+					font-weight: 600;
+					@media only screen and (max-width: 480px) {
+						font-size: 18px;
+					}
+				}
+			}
+			.schedule_content{
+				background: #f8f8f8;
+				border-bottom-left-radius: 15px;
+				border-bottom-right-radius: 15px;
+				p{
+					font-size: $font_size_3;
+					@media only screen and (max-width: 480px) {
+						font-size: 14px;
+					}
+				}
+				.schedule_information{
+					ul {
+						list-style-type: none;
+						padding: 0;
+						li{
+							&:last-child{
+								border: none;
+								align-items: center;
+								@media only screen and (max-width: 480px) {
+									.form_row_center{
+										margin: 0 auto;
+									}
+								}
+								span{
+									font-weight: 600;
+									padding: 5px;
+								}
+							}
+							padding: 15px 0;
+							display: flex;
+							.form_row_center{
+								margin: 0 auto;
+								@media only screen and (max-width: 480px) {
+									margin: 0;
+									margin-left: auto;
+								}
+								p{
+									margin-bottom: 0;
+									color: $color_4;
+									font-size: 16px;
+								}
+							}
+							.form_row_left{
+								p{
+									margin-bottom: 0;
+									color: $color_4;
+									font-size: 16px;
+								}
+								label{
+									color:$color_2;
+									font-weight: 600;
+								}
+								.sub_title{
+									color: $color_4;
+									font-size: 16px;
+									margin-left: 30px;
+									margin-right: auto;
+									@media only screen and (max-width: 320px) {
+										margin-left: 10px;
+									}
+								}	
+							}
+							.form_row_right{
+								margin-left: auto;
+								p{
+									margin-bottom: 0;
+									color: $color_4;
+									font-size: 16px;
+								}
+								.btn_detail{
+									border: 1px solid $color_2;
+									background: $color_5;
+									color: $color_2;
+									padding: 5px 20px;
+									font-weight: 600;
+									border-radius: 5px;
+									cursor: pointer;
+									@media only screen and (max-width: 320px) {
+										padding: 5px 10px;
+									}
+									&:hover,&:focus{
+										background: $color_2;
+										color: $color_3;
+									}
+								}
+							}
+							.title_header{
+								color: $color_1;
+								font-size: $font_size_2;
+								font-weight: 600;
+							}
+
+						}
+					}
 				}
 			}
 		}
@@ -162,6 +348,9 @@ $font_size_2: 15px;
 		font-size: $font_size_1;
 		font-weight: 600;
 		color: $color_2;
+		@media only screen and (max-width: 480px) {
+			font-size: 18px;
+		}
 	}
 	p {
 		font-weight: 600;

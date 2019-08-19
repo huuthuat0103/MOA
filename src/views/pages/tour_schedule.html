@@ -49,28 +49,93 @@
                         </ul>
                     </div>
                 </div>
-                <header class="main_header">
-                    <nav class="navbar navbar-expand-lg navbar-light nar_custom" style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
-                        <a class="navbar-brand icon_logo" href="#">
-                            <img src="images/icon/icon_logo.png">
-                        </a>
-                        <div class="navbar-nav m-auto">
-                            <span class="title_header">패키지모아</span> 
-                        </div>
-                        <span class="btn_sidenav">
-                            <img src="../../images/icon/bullet_hambuger.png">
-                        </span>
-                    </nav>
-                </header>  
+                @@include('../layouts/header.html')
+                @@include('../partials/breadcrumb.html')
                 <section>
                     <div class="wrapper_schedule">
-                        <div class="card">
-                            <div class="card-title schedule_title">
-                                <span>다른 출발일 보기</span>
+                        <div class="wrapper_schedule_content">
+
+                            <div class="card">
+                                <div class="card-body box_schedule">
+                                    <ul>
+                                        <li>
+                                            <img src="../../images/icon/bullet_clock.png">
+                                            <span>3박5일</span>  
+                                        </li>
+                                        <li>
+                                            <img src="../../images/icon/logo-tw.png">
+                                            <span>티웨이 항공</span>
+                                        </li>
+                                        <li>
+                                            <img src="../../images/icon/bullet_cart.png">
+                                            <span>노쇼핑</span>
+                                        </li>
+                                        <li>
+                                            <img src="../../images/icon/bullet_location.png">
+                                            <span>오후출발</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="card-body schedule_content">
-                                <div class="schedule_information">
-                                    <form>
+
+                            <div class="card">
+                                <div class="card-body detail_schedule">
+                                    <ul>
+                                        <li>
+                                            <div class="form_row_left">
+                                                <span class="title_header">가격</span>
+                                            </div>
+                                            <div class="form_row_right">
+                                                <span>200,000원</span>
+                                                <p>아동 100,000 / 유아 80,000</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body detail_schedule">
+                                    <ul>
+                                        <li>
+                                            <div class="form_row_left">
+                                                <span class="title_header">방문지역</span>
+                                            </div>
+                                            <div class="form_row_right">
+                                                <span class="schedule_location">베트남 - 다낭</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body detail_schedule">
+                                    <ul>
+                                        <li>
+                                            <div class="form_row_left">
+                                                <span class="title_header">출국</span>
+                                                <p>7월 22일 (월)</p>
+                                                <p>오후 7:05</p>
+                                                <p>인천/김포 출발</p>
+                                            </div>
+                                            <div class="form_row_center">
+                                                <span class="title_header">베트남 - 다낭</span>
+                                                <p>7월 26일 (금)</p>
+                                                <p>오후 7:05</p>
+                                                <p>인천/김포 출발</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-title schedule_title">
+                                    <span>다른 출발일 보기</span>
+                                </div>
+                                <div class="card-body schedule_content">
+                                    <div class="schedule_information">
                                         <ul>
                                             <li>
                                                 <div class="form_row_left">
@@ -147,20 +212,20 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card">
-                            <div class="card-title schedule_title">
-                                <span>공유하기</span>
-                            </div>
-                            <div class="card-body schedule_content">
-                                <p>
-                                    본 여행상품의 주관여행사는 ‘온라인투어'입니다.좌석상태 및 요금은 여행사의 정책변경 및 환율 변경에 따라 실시간 변경되므로 상품정보에 차이가 있을수 있습니다트립스토어는 통신판매중개자로 여행상품 검색 결과 및 구매에 대한 별도의 책임을 지지 않으며 예약, 결제, 취소 등에 대한 사항은 해당여행사로 문의하시기 바랍니다.현재 화면의 여행 사진은 ‘온라인투어’에서 제공하였습니다.상품정보가 잘못되었다면 여기를 눌러주세요.
+                            <div class="card">
+                                <div class="card-title schedule_title">
+                                    <span>공유하기</span>
+                                </div>
+                                <div class="card-body schedule_content">
+                                    <p>
+                                        본 여행상품의 주관여행사는 ‘온라인투어'입니다.좌석상태 및 요금은 여행사의 정책변경 및 환율 변경에 따라 실시간 변경되므로 상품정보에 차이가 있을수 있습니다트립스토어는 통신판매중개자로 여행상품 검색 결과 및 구매에 대한 별도의 책임을 지지 않으며 예약, 결제, 취소 등에 대한 사항은 해당여행사로 문의하시기 바랍니다.현재 화면의 여행 사진은 ‘온라인투어’에서 제공하였습니다.상품정보가 잘못되었다면 여기를 눌러주세요.
 
-                                </p>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
