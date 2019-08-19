@@ -1,0 +1,326 @@
+.content {
+  margin-top: 60px;
+}
+.review-go {
+  .top-review-go {
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 16px;
+
+    .review-write {
+      color: #9c2e92;
+      border: 1px solid #9c2e92;
+
+      &:hover {
+        color: #fff;
+        background: #9c2e92;
+      }
+    }
+  }
+}
+
+.box-review {
+  padding: 0 16px;
+  .item-review {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    @media screen and (max-width: 480px) {
+      padding: 15px 0;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    .left-review {
+      img {
+        width: 150px;
+        height: 145px;
+        border-radius: 15px;
+        @include transition-3;
+
+        @media screen and (max-width: 480px) {
+          width: 100px;
+          height: 94px;
+        }
+
+        &:hover {
+          background: #454545;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .right-review {
+      margin-left: 25px;
+      .title-review {
+        h4 {
+          font-size: 18px;
+          color: #454545;
+          font-weight: bold;
+
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+          }
+
+          &:hover {
+            color: #9c2e92;
+          }
+        }
+      }
+
+      .star-writing {
+        .check {
+          color: #efce4a;
+          font-size: 18px;
+
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+          }
+        }
+        .no-check {
+          color: #454545;
+          font-size: 18px;
+
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// review-detail
+
+.review-detail {
+  padding: 0 16px;
+
+  .title-detail {
+    padding: 30px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    h4 {
+      font-size: 24px;
+      color: #454545;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      @media screen and (max-width: 480px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .date-review {
+    padding: 10px 0;
+    p {
+      font-size: 18px;
+      color: #9c2e92;
+      font-weight: 400;
+      margin-bottom: 5px;
+
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .star-writing {
+    margin-bottom: 30px;
+    .check {
+      color: #efce4a;
+      font-size: 18px;
+
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+    .no-check {
+      color: #454545;
+      font-size: 18px;
+
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+
+    .address-review {
+      color: #9c2e92;
+    }
+  }
+
+  .text-content {
+    p {
+      font-size: 18px;
+      color: #787878;
+      font-weight: 400;
+
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .gr-image-review {
+    margin-top: 50px;
+    display: flex;
+
+    @media screen and (max-width: 480px) {
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .image-left {
+      width: 65%;
+      padding-right: 15px;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        padding-right: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+        border-radius: 20px;
+        @include transition-3;
+
+        @media screen and (max-width: 480px) {
+          height: auto;
+        }
+
+        &:hover,
+        &:focus {
+          background: #454545;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .image-right {
+      width: 35%;
+      padding-left: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      @media screen and (max-width: 480px) {
+        margin-top: 15px;
+        flex-direction: inherit;
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .img-right-top {
+        @media screen and (max-width: 480px) {
+          width: 48%;
+        }
+        img {
+          width: 100%;
+          height: 200px;
+          border-radius: 15px;
+          @include transition-3;
+
+          @media screen and (max-width: 480px) {
+            height: auto;
+          }
+
+          &:hover,
+          &:focus {
+            background: #454545;
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .img-right-bottom {
+        position: relative;
+        @media screen and (max-width: 480px) {
+          width: 48%;
+        }
+        img {
+          width: 100%;
+          height: 200px;
+          border-radius: 15px;
+
+          @media screen and (max-width: 480px) {
+            height: auto;
+          }
+        }
+
+        .overlay-img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: #0a090982;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 15px;
+          @include transition-3;
+
+          &:hover,
+          &:focus {
+            background: #454545;
+            opacity: 0.8;
+          }
+
+          span {
+            font-size: 48px;
+            color: #fff;
+
+            @media screen and (max-width: 480px) {
+              font-size: 36px;
+            }
+
+            &:hover,
+            &:focus {
+              color: #9c2e92;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn-see-review {
+    margin: 75px 0;
+    display: block;
+
+    @media screen and (max-width: 480px) {
+      margin: 35px 0;
+    }
+
+    .see-review {
+      background: #9c2e92;
+      width: 50%;
+      display: block;
+      border: 1px solid #9c2e92;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 auto;
+      height: 48px;
+      @include transition-3;
+
+      @media screen and (max-width: 480px) {
+        font-size: 14px;
+        height: 36px;
+        width: 60%;
+      }
+
+      &:hover,
+      &:focus {
+        background: transparent;
+        color: #9c2e92;
+      }
+    }
+  }
+}
