@@ -2,6 +2,10 @@
     padding: 0 50px;
     background: #f3f3f3;
     padding-bottom: 20px;
+
+     @media screen and (max-width: 480px) {
+                                padding: 0 15px;
+                            }
     .title-compare {
         padding: 25px 0;
 
@@ -17,17 +21,29 @@
         .box-item {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             .item {
                 width: 48%;
                 background: #fff;
                 border-radius: 10px;
-                .top-item {
-                    padding: 40px 30px;
+
+                            @media screen and (max-width: 480px) {
+                                 width: 100%;
+                                 margin-top: 30px;
+                            }
+                            .top-item {
+                    padding: 25px 30px;
                     border-bottom: 1px solid #e5e5e5;
 
                     img {
                         width: 100%;
                         border-radius: 10px;
+                        @include transition-3;
+
+                        &:hover {
+                            background: #454545;
+                            opacity: .8;
+                        }
                     }
 
                     .date-time {
@@ -37,6 +53,10 @@
                             font-weight: bold;
                             margin-top: 30px;
                             margin-bottom: 0;
+
+                             @media screen and (max-width: 480px) {
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
@@ -52,19 +72,29 @@
                             font-weight: bold;
                             margin-top: 30px;
                             margin-bottom: 20px;
+
+                            @media screen and (max-width: 480px) {
+                                font-size: 16px;
+                            }
                         }
                         
                         p {
                             font-size: 18px;
                             color: #777777;
                             font-weight: bold;
+                            margin-bottom: .2rem;
+
+                             @media screen and (max-width: 480px) {
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
 
                 .gr-button {
                     padding: 0 20px;
-                    margin-top: 20px;
+                    margin-top: 40px;
+                    padding-bottom: 10px;
 
                     button {
                         width: 100%;
@@ -80,6 +110,10 @@
                         font-weight: bold;
                         font-size: 18px;
 
+                         @media screen and (max-width: 480px) {
+                                font-size: 16px;
+                            }
+
                         &:hover, &:focus {
                             background: #9c2e92;
                             color: #fff;
@@ -92,6 +126,10 @@
                         color: #fff;
                         font-weight: bold;
                         font-size: 18px;
+
+                         @media screen and (max-width: 480px) {
+                                font-size: 16px;
+                            }
 
                         &:hover, &:focus {
                             background: transparent;
