@@ -390,11 +390,16 @@ $background_color_2: inherit;
     border-top: 1px solid #e5e5e5;
     .contact{
         padding: 15px 0;
+        font-size: 18px;
+        margin-bottom: 50px;;
         .conttact_title{
             color: #636363;
+            font-weight: bold;
         }
         .contact_qa{
             color: #8f8f8f;
+            margin-bottom: 5px;
+            font-weight: 400;
         }
     }
 }

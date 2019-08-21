@@ -1,8 +1,24 @@
+body {
+  background: #f5f5f5 !important;
+}
+.content, .container_main {
+  background: #fff;
+}
+button {
+  cursor: pointer;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
 .asian-template {
   background: #f3f3f3;
   padding: 25px;
   margin-top: 60px;
   display: block;
+  background: #fff;
   @media screen and (max-width: 567px) {
     padding: 25px 15px;
   }
@@ -216,6 +232,9 @@
       .img-thumnail {
         height: 268px;
         position: relative;
+        overflow: hidden;
+        transition: .2s;
+       @include hover-circle;
 
         img {
           object-fit: cover;
@@ -926,6 +945,47 @@
       @media screen and (max-width: 480px) {
         font-size: 16px;
       }
+    }
+  }
+}
+
+
+.popup-datetime {
+  position: fixed;
+  background: #fff;
+  top: 60px;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  padding: 25px 16px;
+  @include transition-3;
+
+  .btnds {
+    cursor: pointer;
+
+    i {
+      font-size: 30px;
+      color: #c6b4c5;
+    }
+  }
+
+  .popup-content {
+
+    .title-date {
+      font-size: 24px;
+      font-weight: bold;
+      color: #454545;
+      text-align: center;
+      padding: 50px 0;
+      border-bottom: 1.5px solid #f3eaf2;
+    }
+
+    .content-popup {
+      min-height: 500px;
     }
   }
 }
