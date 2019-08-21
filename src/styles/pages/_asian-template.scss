@@ -300,7 +300,7 @@
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   @media screen and (max-width: 480px) {
-   padding: 15px 10px;
+    padding: 15px 10px;
   }
   .btnds {
     cursor: pointer;
@@ -487,7 +487,7 @@
 
       @media screen and (max-width: 480px) {
         font-size: 18px;
-       }
+      }
 
       i {
         color: #9c2e92;
@@ -508,7 +508,7 @@
 
           @media screen and (max-width: 480px) {
             padding: 7px 15px;
-           }
+          }
 
           .btn-item {
             display: flex;
@@ -547,8 +547,8 @@
             .custom-control-label {
               margin-left: 13px;
               @media screen and (max-width: 480px) {
-               margin-left: 5px;
-               }
+                margin-left: 5px;
+              }
             }
 
             .custom-checkbox .custom-control-label::before {
@@ -561,7 +561,7 @@
               @media screen and (max-width: 480px) {
                 width: 20px;
                 height: 20px;
-               }
+              }
             }
 
             .custom-control-input:checked ~ .custom-control-label::before {
@@ -579,7 +579,7 @@
               @media screen and (max-width: 480px) {
                 width: 20px;
                 height: 20px;
-               }
+              }
             }
 
             .text {
@@ -591,14 +591,13 @@
 
               @media screen and (max-width: 480px) {
                 font-size: 14px;
-               }
+              }
 
               .label-text {
                 width: 45%;
                 @media screen and (max-width: 480px) {
                   width: 60%;
-                 }
-
+                }
               }
 
               .amount {
@@ -612,7 +611,7 @@
 
               @media screen and (max-width: 480px) {
                 padding: 0 20px;
-               }
+              }
 
               .amount-item {
                 display: flex;
@@ -632,7 +631,7 @@
                   @media screen and (max-width: 480px) {
                     font-size: 14px;
                     width: 60%;
-                   }
+                  }
 
                   .name {
                     color: #000;
@@ -705,26 +704,26 @@
 
 .price-product {
   .title-text {
-    .text-left{
-    color: #787878;
-    font-size: 18px;
+    .text-left {
+      color: #787878;
+      font-size: 18px;
     }
 
-    .text-center{
+    .text-center {
       color: #c6b4c5;
       font-size: 18px;
       margin-left: 10px;
       @media screen and (max-width: 480px) {
-       font-size: 14px;
+        font-size: 14px;
       }
-      }
+    }
   }
 
   .price-number {
     width: 100%;
     height: 8px;
     border-radius: 5px;
-    background: #F8E9F7;
+    background: #f8e9f7;
     position: relative;
     margin-top: 10px;
 
@@ -784,7 +783,7 @@
 
           @media screen and (max-width: 480px) {
             font-size: 14px;
-           }
+          }
         }
       }
     }
@@ -829,7 +828,7 @@
       border: 1px solid #9c2e92;
       border-radius: 5px;
       color: #fff;
-     height: 46px;
+      height: 46px;
       width: 60%;
       @include transition-3;
 
@@ -837,6 +836,95 @@
         background: transparent;
         color: #9c2e92;
         border: 1px solid #9c2e92;
+      }
+    }
+  }
+}
+
+.popup-search {
+  position: fixed;
+  background: #fff;
+  top: 60px;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  padding: 25px 16px;
+  @include transition-3;
+  .btnds {
+    cursor: pointer;
+
+    i {
+      font-size: 30px;
+      color: #c6b4c5;
+    }
+  }
+
+  .content-popup {
+    margin-top: 40px;
+
+    @media screen and (max-width: 480px) {
+      margin-top: 20px;
+    }
+    .form-group {
+      position: relative;
+      input {
+        height: 46px;
+        font-size: 24px;
+        color: #8f8f8f;
+        font-weight: bold;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #e1e1e1;
+
+        @media screen and (max-width: 480px) {
+          font-size: 18px;
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      .btn-search {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .result-search {
+    border-radius: 20px;
+    padding: 40px;
+    min-height: 500px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url(../../images/background/theworld.png);
+    @media screen and (max-width: 480px) {
+      padding: 15px;
+      min-height: 350px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #787878;
+      font-weight: 400;
+      display: none;
+      margin-bottom: 5px;
+
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
       }
     }
   }
