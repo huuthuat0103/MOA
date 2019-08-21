@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- include head.html -->
+    @@include('../layouts/head.html', {
+    "title": "HTML"
+})
+<!-- include styles.html -->
+@@include('../layouts/styles.html')
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- include banner.html -->
+        <!-- @@include('../partials/banner.html') -->
+
+        <main class="main-container">
+            <div class="container_main" id="container_main">
+                <div class="ovelay_menu"></div>
+                <div class="main_sidenav main_sidenav_block main_sidenav_card main_sidenav_animate_right"
+                id="rightMenu">
+                <div class="main_sidenav_info">
+                    <button onclick="" class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large"
+                    id="close_menu"><i class="fas fa-times"></i></button>
+                    <div class="main_sidenav_login">
+                        <span class="btn_login">
+                            카카오로 로그인
+                        </span>
+                        <div class="info_user">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="main_sidenav_content">
+                    <ul>
+                        <li>
+                            <i class="fas fa-pen mr-2"></i>
+                            <a href="">패키지 검색 </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-pen mr-2"></i>
+                            <a href="">패키지 검색 </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-pen mr-2"></i>
+                            <a href="">패키지 검색 </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-pen mr-2"></i>
+                            <a href="">패키지 검색 </a>
+                        </li>
+                        <li>
+                            <i class="fas fa-pen mr-2"></i>
+                            <a href="">패키지 검색 </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @@include('../layouts/header.html')
+            <section>
+                <div class="content">
+                    <div class="wrapper_register_advance">
+                        <div class="box_register_list">
+                            <div class="item_register">
+                                <div class="image_box">
+                                    <a href="">
+                                        <img src="./images/background/box-01.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="content_box">
+                                    <div class="title_box">
+                                        <a href="">
+                                            <h4>
+                                                다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="info_box">
+                                        <div class="price">
+                                            <span>200,000 원
+                                            </span>
+                                        </div>
+                                        <div class="logo_tway">
+                                            <p>티웨이 항공
+                                                <img src="./images/icon/logo-tw.png" alt="">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer_box">
+                                <p>하나투어 2019년 7월 22일 (월) 출발 ~ 2019년 7월 27일 (금) 도착</p>
+                            </div>
+                        </div>
+
+                        <div class="box_register_list">
+                            <div class="box_register_content">
+                                <h4 class="register_title">예약자 정보</h4>
+                                <div class="register_content">
+                                    <input class="form-control" type="" name="" placeholder="예약자 실명입력">
+
+                                    <input class="form-control" type="" name="" placeholder="휴대폰 번호">
+
+                                    <input class="form-control" type="" name="" placeholder="생년월일 (ex. 19940323)">
+
+                                    <input class="form-control"type="" name="" placeholder="이메일(선택입력)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box_register_list">
+                            <div class="box_register_content">
+                                <h4 class="register_title">문의사항 (선택입력)</h4>
+                                <div class="register_content">
+                                    <div class="amount-list-item">
+                                        <div class="amount-item">
+                                            <div class="left-item">
+                                                <p class="name">성인</p>
+                                                <p>만 12세 이상</p>
+                                            </div>
+                                            <div class="right-item">
+                                                <span class="up-to"></span>
+                                                <span class="number">1</span>
+                                                <span class="down"></span>
+                                            </div>
+                                        </div>
+                                        <div class="amount-item">
+                                            <div class="left-item">
+                                                <p class="name">아동</p>
+                                                <p>만 12세 이하</p>
+                                            </div>
+                                            <div class="right-item">
+                                                <span class="up-to"></span>
+                                                <span class="number">1</span>
+                                                <span class="down"></span>
+                                            </div>
+                                        </div>
+                                        <div class="amount-item">
+                                            <div class="left-item">
+                                                <p class="name">소아</p>
+                                                <p>만 2세 이하</p>
+                                            </div>
+                                            <div class="right-item">
+                                                <span class="up-to"></span>
+                                                <span class="number">1</span>
+                                                <span class="down"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box_register_list">
+                            <div class="box_register_content">
+                                <h4 class="register_title">문의사항 (선택입력)</h4>
+                                <div class="register_content">
+                                    <textarea class="form-control" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box_register_list">
+                            <div class="box_register_content">
+                                <h4 class="register_title">문의사항 (선택입력)</h4>
+                                <div class="register_content">
+                                    <input class="form-control" type="" name="" placeholder="개인정보 수집・이용 및 제3자 정보 제공 동의">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="gr_btn_register">
+                            <button class="btn btn_register">예약신청</button>
+                        </div>
+                    </div>     
+                </div>
+            </section>
+            <footer class="main_footer">
+                @@include('../layouts/footer.html')
+            </footer>
+        </div>
+    </main>
+
+    <!-- include footer.html -->
+
+</div>
+
+<!-- include scripts.html -->
+@@include('../layouts/scripts.html')
+
+</body>
+
+</html>

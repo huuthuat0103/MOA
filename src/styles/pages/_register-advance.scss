@@ -1,0 +1,288 @@
+.wrapper_register_advance{
+	padding: 20px;
+	.box_register_list{
+		margin-bottom: 30px;
+
+		.item_register {
+			display: flex;
+			align-items: center;
+			padding: 20px 0;
+
+			@media screen and (max-width: 480px) {
+				padding: 15px 0;
+			}
+
+			&:last-child {
+				border: none;
+			}
+
+			.image_box {
+				img {
+					width: 245px;
+					height: 190px;
+					border-radius: 15px;
+
+					@media screen and (max-width: 480px) {
+						width: 100px;
+						height: 94px;
+					}
+
+					&:hover, &:focus {
+						background: #454545;
+						opacity: 0.8;
+					}
+				}
+			}
+
+			.content_box {
+				margin-left: 25px;
+
+				.title_box{
+					h4 {
+						font-size: 24px;
+						font-weight: bold;
+						color: #6b6b6b;
+						margin-bottom: 20px;
+
+						@media screen and (max-width: 480px) {
+							font-size: 16px;
+							margin-bottom: 10px;
+						}
+
+						@media screen and (max-width: 375px) {
+							font-size: 14px;
+							margin-bottom: 5px;
+						}
+
+						&:hover, &:focus {
+							color: #9c2e92;
+						}
+					}
+				}
+
+				.tour-name {
+					h6 {
+						font-size: 18px;
+						color: #5e5e5e;
+						font-weight: 600;
+
+						@media screen and (max-width: 480px) {
+							font-size: 14px;
+						}
+
+						@media screen and (max-width: 375px) {
+							font-size: 12px;
+						}
+					}
+				}
+
+				.time-date {
+					h6 {
+						font-size: 18px;
+						color: #5e5e5e;
+						font-weight: 600;
+
+						@media screen and (max-width: 480px) {
+							font-size: 14px;
+						}
+
+						@media screen and (max-width: 375px) {
+							font-size: 12px;
+						}
+					}
+				}
+
+				.info_box {
+					display: flex;
+					flex-direction: column;
+
+					.price {
+						color: #9c2e92;
+						font-size: 18px;
+						font-weight: bold;
+
+						@media screen and (max-width: 480px) {
+							font-size: 14px;
+						}
+
+						@media screen and (max-width: 375px) {
+							font-size: 12px;
+						}
+					}
+
+					.logo_tway p {
+						color: #000;
+						font-size: 18px;
+						font-weight: bold;
+						margin-bottom: 0;
+
+						@media screen and (max-width: 480px) {
+							font-size: 14px;
+						}
+
+						@media screen and (max-width: 375px) {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+
+		.footer_box{
+			display: block;
+			p{
+				font-size: 18px;
+				color: #787878;
+				@media screen and (max-width: 480px) {
+					font-size: 16px;
+				}
+			}
+		}
+
+		.box_register_content{
+			.amount-list-item {
+				padding: 0 40px;
+				@media screen and (max-width: 480px) {
+					padding: 0 20px;
+				}
+				@media screen and (max-width: 320px) {
+					padding: 0;
+				}
+
+				.amount-item {
+					display: flex;
+					align-items: center;
+					padding: 5px 0;
+
+					p {
+						margin-bottom: 0;
+						margin-right: 10px;
+						color:#787878;
+					}
+					.left-item {
+						display: flex;
+						align-items: center;
+						width: 50%;
+						font-size: 18px;
+
+						@media screen and (max-width: 480px) {
+							font-size: 14px;
+							width: 60%;
+						}
+
+						.name {
+							color: #000;
+							font-weight: bold;
+						}
+					}
+
+					.right-item {
+						margin-left: 20px;
+						display: flex;
+						align-items: center;
+						width: 60%;
+						justify-content: flex-end;
+
+						span {
+							margin: 0 5px;
+						}
+
+						span.down {
+							width: 20px;
+							height: 20px;
+							background: #d8bfd7;
+							border-radius: 50%;
+							cursor: pointer;
+							position: relative;
+
+							&::before {
+								position: absolute;
+								content: "-";
+								font-size: 24px;
+								top: -57%;
+								color: #fff;
+								left: 27%;
+							}
+						}
+
+						span.number {
+							font-weight: bold;
+							font-size: 16px;
+							color: #000;
+						}
+
+						span.up-to {
+							cursor: pointer;
+							border: 1px solid #9c2e92;
+							width: 20px;
+							height: 20px;
+							border-radius: 50%;
+							position: relative;
+							background: #9c2e92;
+							color: #fff;
+
+							&::before {
+								position: absolute;
+								content: "+";
+								font-size: 24px;
+								top: -66%;
+								left: 4%;
+							}
+						}
+					}
+				}
+			}
+			.register_title{
+				font-size: 18px;
+				color: #454545;
+				font-weight: 600;
+				@media screen and (max-width: 480px) {
+					font-size: 16px;
+				}
+			}
+			textarea{
+				margin-bottom: 25px;
+				background-color: #f3f3f3;
+				&:focus{
+					box-shadow: none;
+				}
+			}
+			input{
+				margin-bottom: 15px;
+				width: 100%;
+				background-color: #f3f3f3;
+				height: 40px;
+				border-radius: 5px;
+				border: none;
+				&:focus{
+					box-shadow: none;
+				}
+			}
+			::placeholder {
+				color: #8f8f8f;
+				font-size: 14px;	
+			}
+			::-moz-placeholder { 
+				color: #8f8f8f;
+				font-size: 14px;
+			}
+			:-ms-input-placeholder { 
+				color: #8f8f8f;
+				font-size: 14px;
+			}
+			:-moz-placeholder {
+				color: #8f8f8f;
+				font-size: 14px;
+			}
+		}
+	}
+	.gr_btn_register{
+		text-align: center;
+		margin: 0 auto;
+		.btn_register{
+			background: #9c2e92;
+			color: #fff;
+			width: 100%;
+		}
+	}
+}
