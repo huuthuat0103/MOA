@@ -1,0 +1,131 @@
+$background_color_1: #eee;
+$background_color_2: #ccc;
+$background_color_3: #9c2e92;
+$color_1: #8f8f8f;
+$color_2: #9c2e92;
+$color_3: #fff;
+.wrapper_booking_schedule{
+	padding: 20px;
+	.content_booking_schedule{
+		margin-bottom: 20px;
+		.nofitication_booking_schedule{
+			font-size: 18px;
+			color: $color_2;
+			font-weight: 500;
+			@media only screen and (max-width: 480px) {
+				font-size: 16px;
+			}
+		}
+		.btn_booking{
+			width: 100%;
+			background: $background_color_3;
+			color: $color_3;
+			font-weight: 600;
+			padding: 10px;
+			border-radius: 10px;
+			cursor: pointer;
+			&:hover{
+				background: $background_color_1;
+				color: $color_2;
+			}
+			&:focus{
+				background: $background_color_1;
+				color: $color_2;
+			}
+		}
+		.container_checkbox {
+			display: block;
+			position: relative;
+			padding-left: 35px;
+			margin-bottom: 10px;
+			cursor: pointer;
+			font-size: 18px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			.booking_content{
+				font-weight: 600;
+				font-size: 18px;
+				@media only screen and (max-width: 480px) {
+					font-size: 16px;
+				}
+			}
+			.booking_sub_content{
+				display: flex;
+				font-size: 16px;
+				color: $color_1;
+				@media only screen and (max-width: 480px) {
+					font-size: 14px;
+					flex-direction: column;
+				}
+				span{
+					padding-right: 30px;
+				}
+			}
+			.checkmark {
+				&:after {
+					left: 9px;
+					top: 5px;
+					width: 5px;
+					height: 10px;
+					border: solid white;
+					border-width: 0 3px 3px 0;
+					-webkit-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+			}
+		}
+		.container_checkbox input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+			&:checked {
+				&~.checkmark {
+					background: $background_color_3;
+				}
+			}
+		}
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 25px;
+			width: 25px;
+			border-radius: 5px;
+			background-color: $background_color_1;
+			@media only screen and (max-width: 480px) {
+				top: 5px;
+				height: 20px;
+				width: 20px;
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				display: none;
+			}
+		}
+		.container_checkbox {
+			&:hover {
+				input {
+					&~.checkmark {
+						background-color: $background_color_2;
+					}
+				}
+			}
+			input {
+				&:checked {
+					&~.checkmark {
+						&:after {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
