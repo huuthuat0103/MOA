@@ -22,6 +22,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     slide_Show();
     show_Fillter();
+    show_search();
     CONTROL = {
         main_LEFT: $('#container_main').offset().left,
         main_sidenav: $('.main_sidenav '),
@@ -133,8 +134,6 @@ function show_Fillter() {
         'left': CONTROLFILLTER.main_LEFT
     });
 
-    console.log(CONTROLFILLTER.WID_SCREEN);
-
     CONTROLFILLTER.get_fitter.click(function () {
         $('.popup-fillter').css({
             'opacity': 1,
@@ -144,6 +143,34 @@ function show_Fillter() {
     });
     CONTROLFILLTER.hide_fitter.click(function () {
         $('.popup-fillter').css({
+            'opacity': 0,
+            'z-index': '-1',
+            'width': 0
+        });
+    });
+
+} 
+
+function show_search() {
+    var CONTROLFILLTER = {
+        main_LEFT: $('#container_main').offset().left,
+        WID_SCREEN: $('#container_main').width(),
+        get_search: $('#get-search'),
+        hide_search: $('#close_fitter')
+    }
+    $('.popup-search').css({
+        'left': CONTROLFILLTER.main_LEFT
+    });
+
+    CONTROLFILLTER.get_search.click(function () {
+        $('.popup-search').css({
+            'opacity': 1,
+            'z-index': '2',
+            'width': CONTROLFILLTER.WID_SCREEN
+        });
+    });
+    CONTROLFILLTER.hide_search.click(function () {
+        $('.popup-search').css({
             'opacity': 0,
             'z-index': '-1',
             'width': 0

@@ -70,7 +70,8 @@
                                     <i class="fas fa-user-alt"></i>
                                     <span class="ml-1">1</span>
                                 </button>
-                                <button class="btn btn-goto">출발지</button>
+                                <button class="btn btn-goto" id="get-search" type="button" data-toggle="modal"
+                                data-target="#exampleModalCenter">출발지</button>
                             </div>
                         </div>
                         <div class="main_box_search">
@@ -696,6 +697,36 @@
                                 <div class="gr-button">
                                     <button class="btn-left btn">초기화 </button>
                                     <button class="btn-right btn">100개의 결과 보기 </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end -->
+
+                        <!-- popup-search -->
+                        <div class="popup-search">
+                            <div class="header-popup">
+                                <div class="row">
+                                    <div class="col-md-12 d-flex justify-content-end">
+                                        <span class="btnds " id="close_fitter">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-popup">
+                                <form action="">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="exampleInputEmaisl1" aria-describedby="emailHelp" placeholder=" ">
+                                        <button class="btn btn-search">
+                                            <img src="./images/icon/bullet_search.png" alt="">
+                                      </button> 
+                                      </div>                             
+                                </form>
+                                <div class="result-search">
+                                    <p>런던</p>
+                                    <p>영국 바이런베이</p>
+                                    <p>호주 울런공</p>
+                                    <p>호주 환런</p>
                                 </div>
                             </div>
                         </div>
