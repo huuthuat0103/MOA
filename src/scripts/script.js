@@ -24,6 +24,8 @@ $(document).ready(function () {
     show_Fillter();
     show_search();
     show_date();
+    togle();
+    togle_sub();
     CONTROL = {
         main_LEFT: $('#container_main').offset().left,
         main_sidenav: $('.main_sidenav '),
@@ -124,31 +126,31 @@ function slide_Show() {
     });
 }
 function show_Fillter() {
-    // console.log();
-    var CONTROLFILLTER = {
-        main_LEFT: $('#container_main').offset().left,
-        WID_SCREEN: $('#container_main').width(),
-        get_fitter: $('#get_fitter'),
-        hide_fitter: $('#hide_fitter')
-    }
-    $('.popup-fillter').css({
-        'left': CONTROLFILLTER.main_LEFT
-    });
+// console.log();
+var CONTROLFILLTER = {
+    main_LEFT: $('#container_main').offset().left,
+    WID_SCREEN: $('#container_main').width(),
+    get_fitter: $('#get_fitter'),
+    hide_fitter: $('#hide_fitter')
+}
+$('.popup-fillter').css({
+    'left': CONTROLFILLTER.main_LEFT
+});
 
-    CONTROLFILLTER.get_fitter.click(function () {
-        $('.popup-fillter').css({
-            'opacity': 1,
-            'z-index': '2',
-            'width': CONTROLFILLTER.WID_SCREEN
-        });
+CONTROLFILLTER.get_fitter.click(function () {
+    $('.popup-fillter').css({
+        'opacity': 1,
+        'z-index': '2',
+        'width': CONTROLFILLTER.WID_SCREEN
     });
-    CONTROLFILLTER.hide_fitter.click(function () {
-        $('.popup-fillter').css({
-            'opacity': 0,
-            'z-index': '-1',
-            'width': 0
-        });
+});
+CONTROLFILLTER.hide_fitter.click(function () {
+    $('.popup-fillter').css({
+        'opacity': 0,
+        'z-index': '-1',
+        'width': 0
     });
+});
 
 } 
 
@@ -207,3 +209,19 @@ function show_date() {
     });
 
 } 
+function togle(){
+    $('.card_header').click(function(){
+        var id_to = $(this).attr('data-show');
+        $('#collapse_'+ id_to).toggle(300);
+    });
+}
+
+function togle_sub(){
+    $('.card_sub_header').click(function(){
+        var id_sub_to = $(this).attr('data-show');
+
+         $('#collapse_'+ id_sub_to).toggle(300);
+       
+        // $(this).addClass('active');
+    });
+}
