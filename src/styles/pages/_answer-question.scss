@@ -1,0 +1,53 @@
+.wrapper_faq{
+	padding: 20px;
+	.accordion{
+		.card_accordion{
+			margin-bottom: 10px;
+			background: #f8f8f8;
+			.card_header{
+				border: 1px solid #ccc;
+				background: #fff;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 5px;
+				span{
+					color: #9c2e92;
+					font-size: 18px;
+					font-weight: 600;
+
+				}
+			}
+		}
+		.card_body{
+			border: none;
+			background: #f8f8f8;
+			border-radius: 0;
+			padding: 15px;
+			.card_sub_accordion{
+				border-bottom: 1px solid #d6d6d6;
+				padding: 10px 0;
+				margin-bottom: 10px;
+				.card_sub_header{
+					display: flex;
+					justify-content: space-between;
+					cursor: pointer;
+					span{
+						padding: 10px 0;
+						font-size: 18px;
+						font-weight: 600;
+					}
+				}
+				.card_sub_body{
+					font-weight: 400;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+.card_sub_header.active{
+	i{
+		transition: all .3s ease-in-out 0s;
+		transform: rotate(90deg);
+	}
+}
