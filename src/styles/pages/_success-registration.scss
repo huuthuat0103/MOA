@@ -10,16 +10,47 @@
 		text-align: center;
 		margin: 0 auto;
 		.text_content{
-			padding: 0 50px;
-			margin-top: 130px;
+			padding: 0 30px;
+			margin-top: 90px;
 			h4{
 				text-align: left;
 				font-weight: 600;
 				font-size: 18px;
 				color:#454545;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #d5d5d5;
+				@media only screen and (max-width: 480px) {
+					font-size: 16px;
+				}
 			}
 			textarea{
 				margin-bottom: 30px;
+				background-color: #f3f3f3;
+				&:focus{
+					box-shadow: none;
+				}
+			}
+			.wrapper_content{
+				text-align: left;
+				margin-bottom: 20px;
+				display: flex;
+				flex-direction: column;
+				.title_content{
+					color:#454545;
+					font-size: 18px;
+					font-weight: 600;
+					@media only screen and (max-width: 480px) {
+						font-size: 16px;
+					}
+				}
+				.sub_content{
+					color: #8f8f8f;
+					font-weight: 500;
+					font-size: 16px;
+					@media only screen and (max-width: 480px) {
+						font-size: 14px;
+					}
+				}
 			}
 		}
 		h4{

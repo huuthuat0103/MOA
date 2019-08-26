@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- include head.html -->
+    @@include('../layouts/head.html', {
+    "title": "HTML"
+})
+<!-- include styles.html -->
+@@include('../layouts/styles.html')
+</head>
+<body>
+    <div class="wrapper">
+        <!-- include banner.html -->
+        <!-- @@include('../partials/banner.html') -->
+
+        <main class="main-container">
+            <div class="container_main" id="container_main">
+                <div class="ovelay_menu"></div>
+                <div class="main_sidenav main_sidenav_block main_sidenav_card main_sidenav_animate_right" id="rightMenu">
+                    <div class="main_sidenav_info">
+                        <button class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large" id="close_menu"><i class="fas fa-times"></i></button>
+                        <div class="main_sidenav_login">
+                            <span class="btn_login">
+                                카카오로 로그인
+                            </span>
+                            <div class="info_user">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_sidenav_content">
+                        <ul>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">패키지 검색</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">위시리스트</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">예약 내역</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-pen mr-2"></i>
+                                <a href="">문의</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <header class="main_header">
+                    <nav class="navbar navbar-expand-lg navbar-light nar_custom" style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
+                        <a class="navbar-brand icon_logo" href="#">
+                            <img src="images/icon/icon_logo.png">
+                        </a>
+                        <div class="navbar-nav m-auto">
+                            <span class="title_header">패키지모아</span> 
+                        </div>
+                        <span class="btn_sidenav">
+                            <img src="../../images/icon/bullet_hambuger.png">
+                        </span>
+                    </nav>
+                </header>  
+                <section>
+                    <div class="wrapper_notification">
+                        <div class="notification_content">
+                            <div class="text_content">
+                                <h4>다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
+                                
+                                <div class="wrapper_content">
+                                    <span class="title_content">금액</span>
+                                    <span class="sub_content">200,000 원</span>
+                                </div>
+
+                                <div class="wrapper_content">
+                                    <span class="title_content">출발일</span>
+                                    <span class="sub_content">2019년 7월 22일 (월) 오후 8시 50분</span>
+                                </div>
+                                
+                                <div class="wrapper_content">
+                                    <span class="title_content">인원</span>
+                                    <span class="sub_content">1명 (성인1, 아동0, 유아0) </span>
+                                </div>
+
+                                <div class="wrapper_content">
+                                    <span class="title_content">상품코드</span>
+                                    <span class="sub_content">19713-200</span>
+                                </div>
+
+                                <div class="wrapper_content">
+                                    <span class="title_content">여행사</span>
+                                    <span class="sub_content">하나투어</span>
+                                </div>
+
+                                <div class="wrapper_content">
+                                    <span class="title_content">예약자</span>
+                                    <span class="sub_content">홍길동</span>
+                                </div>
+
+                                <div class="wrapper_content">
+                                    <span class="title_content">휴대폰</span>
+                                    <span class="sub_content">010-1234-5678</span>
+                                </div>
+
+                                <div class="wrapper_content">
+                                    <span class="title_content">이메일</span>
+                                    <span class="sub_content">abc@abc.com</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <footer class="main_footer">
+                    @@include('../layouts/footer.html')
+                </footer>
+            </div>
+        </main>
+
+        <!-- include footer.html -->
+    </div>
+
+    <!-- include scripts.html -->
+    @@include('../layouts/scripts.html')
+
+</body>
+</html>
