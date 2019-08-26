@@ -109,15 +109,30 @@
                             </div>
                             <p>문의사항 등록 시 <span class="tag_question"><a href="">개인정보 수집 및 이용</a></span>에 동의하는 것으로 간주됩니다.</p>
                             <div class="wrapper_btn_question">
-                                <button>
+                                <button type="button" data-toggle="modal" data-target="#question_schedule" class="btn">
                                     문의
                                 </button>
                             </div>
                         </div>
                     </div>
-                </section>
-                <footer class="main_footer">
-                    <footer class="footer-container">
+                    <div class="modal" id="question_schedule">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body popup_content">
+                                    <img src="../../images/background/bg_nofitication.png">
+                                    <p>에 동의하는 것으로 간주됩니다.</p>
+                                </div>
+                       </div>
+                        </div>
+                    </div>
+        </section>
+        <footer class="main_footer">
+            <footer class="footer-container">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -130,15 +145,15 @@
     </div>
   </div>
 </footer>
-                </footer>
-            </div>
-        </main>
-
-        <!-- include footer.html -->
+        </footer>
     </div>
+</main>
 
-    <!-- include scripts.html -->
-    <!-- build:js(.) script/vendor.min.js -->
+<!-- include footer.html -->
+</div>
+
+<!-- include scripts.html -->
+<!-- build:js(.) script/vendor.min.js -->
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <!-- endbuild -->
