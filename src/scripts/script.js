@@ -219,9 +219,8 @@ function togle(){
 function togle_sub(){
     $('.card_sub_header').click(function(){
         var id_sub_to = $(this).attr('data-show');
-
-         $('#collapse_'+ id_sub_to).toggle(300);
-       
+        $('#collapse_'+ id_sub_to).toggle(300);
         // $(this).addClass('active');
+        $(this).toggleClass("active").next(".desc_div").slideToggle("slow").siblings('.desc_div').slideUp().removeClass("active").end();
     });
 }
