@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- include head.html -->
     <title>HTML</title>
@@ -20,14 +19,9 @@
 <meta property="og:type" content="">
 <meta property="og:url" content="" />
 <!-- Google Font -->
-    <!-- include styles.html -->
-    <!-- build:css(.) style/vendor.min.css -->
-<link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.css" />
-<!-- endbuild -->
-<!-- build:css(.tmp) style/style.min.css -->
-<link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
-
-<!-- endbuild -->
+<!-- include styles.html -->
+<link rel="stylesheet" href="style/vendor.min.css">
+<link rel="stylesheet" href="style/style.min.css">
 
 <!-- boostrap -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -39,7 +33,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
 
 </head>
-
 <body>
     <div class="wrapper">
         <!-- include banner.html -->
@@ -48,11 +41,9 @@
         <main class="main-container">
             <div class="container_main" id="container_main">
                 <div class="ovelay_menu"></div>
-                <div class="main_sidenav main_sidenav_block main_sidenav_card main_sidenav_animate_right"
-                    id="rightMenu">
+                <div class="main_sidenav main_sidenav_block main_sidenav_card main_sidenav_animate_right" id="rightMenu">
                     <div class="main_sidenav_info">
-                        <button onclick="" class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large"
-                            id="close_menu"><i class="fas fa-times"></i></button>
+                        <button class="main_sidenav_item main_sidenav_item_button main_sidenav_item_large" id="close_menu"><i class="fas fa-times"></i></button>
                         <div class="main_sidenav_login">
                             <span class="btn_login">
                                 카카오로 로그인
@@ -66,85 +57,49 @@
                         <ul>
                             <li>
                                 <i class="fas fa-pen mr-2"></i>
-                                <a href="">패키지 검색 </a>
+                                <a href="">패키지 검색</a>
                             </li>
                             <li>
                                 <i class="fas fa-pen mr-2"></i>
-                                <a href="">패키지 검색 </a>
+                                <a href="">위시리스트</a>
                             </li>
                             <li>
                                 <i class="fas fa-pen mr-2"></i>
-                                <a href="">패키지 검색 </a>
+                                <a href="">예약 내역</a>
                             </li>
                             <li>
                                 <i class="fas fa-pen mr-2"></i>
-                                <a href="">패키지 검색 </a>
-                            </li>
-                            <li>
-                                <i class="fas fa-pen mr-2"></i>
-                                <a href="">패키지 검색 </a>
+                                <a href="">문의</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <header class="main_header">
-    <nav class="navbar navbar-expand-lg navbar-light nar_custom" style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
-        <a class="navbar-brand icon_logo" href="#">
-            <img src="images/icon/icon_logo.png">
-        </a>
-        <div class="navbar-nav m-auto">
-            <span class="title_header">패키지모아</span> 
-        </div>
-        <span class="btn_sidenav">
-            <img src="./images/icon/bullet_hambuger.png">
-        </span>
-    </nav>
-</header>  
-                <section class="container-fuild">
-                    <div class="content">
-                        <div class="write-review review-detail">
-                            <div class="title-detail">
-                                <h4>다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
-                            </div>
-                            <div class="date-review">
+                    <nav class="navbar navbar-expand-lg navbar-light nar_custom" style="background-color: #fff; border-bottom: 1px solid #e5e5e5;">
+                        <a class="navbar-brand icon_logo" href="#">
+                            <img src="images/icon/icon_logo.png">
+                        </a>
+                        <div class="navbar-nav m-auto">
+                            <span class="title_header">패키지모아</span> 
+                        </div>
+                        <span class="btn_sidenav">
+                            <img src="../../images/icon/bullet_hambuger.png">
+                        </span>
+                    </nav>
+                </header>  
+                <section>
+                    <div class="wrapper_notification">
+                        <div class="notification_content">
+                            <div class="text_content">
+                                <h4 class="text-center">다낭 호이안 바나산국립공원 실속팩 5일 + 쇼핑 3회</h4>
                                 <p>
-                                    2019-07-15
+                                    예약 취소접수가 완료되었습니다.
+                                    홍길동님의 최소 신청 사유를 하나투어에 전달했습니다.
                                 </p>
-                            </div>
-                            <div class="star-writing">
-                                    <i class="fas fa-star check"></i>
-                                    <i class="fas fa-star check"></i>
-                                    <i class="fas fa-star check"></i>
-                                    <i class="fas fa-star check"></i>
-                                    <i class="far fa-star no-check"></i>
-                                    <span class="address-review">
-                                            만족
-                                    </span>
-                            </div>
-                            <div class="text-content">
-                                <p class="mb-1">
-                                    즐거운 여행이 되셨나요? 
-                                </p>
-                                <p>후기를 남겨주시면 다른 분들의 선택에 많은 도움이 되실 거에요.</p>
-                            </div>
-                            <div class="write">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="진솔한 후기를 남겨주세요"></textarea>
-                            </div>
-                            <div class="add-img">
-                                <button class="btn btn-add-img">
-                                    <i class="fas fa-image"></i>
-                                </button>
-                            </div>
-                            <div class="share-sns">
-                                <h4>
-                                    이번 여행에 대한 글을 남긴 SNS 경로를 남기시면 많은 분들이 당신을 팔로워 하실 거에요. 
-                                </h4>
-                                <form action="">
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="URL">
-                                </form>
-                            </div>
-                            <div class="button-write">
-                                <button class="btn btn-write">후기등록</button>
+
+                                <div class="reservation_history">
+                                    <span>같은 여행지 다른상품보기</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,18 +123,11 @@
         </main>
 
         <!-- include footer.html -->
-
     </div>
 
     <!-- include scripts.html -->
-    <!-- build:js(.) script/vendor.min.js -->
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<!-- endbuild -->
-<!-- build:js script/script.min.js -->
-<script type="text/javascript" src="scripts/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-<!-- endbuild -->
+    <script src="script/vendor.min.js"></script>
+<script src="script/script.min.js"></script>
 
 <!-- boostrap -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -196,5 +144,4 @@
 <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
 
 </body>
-
 </html>
