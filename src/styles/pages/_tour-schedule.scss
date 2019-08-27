@@ -110,9 +110,6 @@ $font_size_3: 16px;
 					justify-content: space-around;
 					text-align: center;
 					align-items: center;
-					@media only screen and (max-width: 480px) {
-						display: block;
-					}
 					li{
 						align-items: center;
 						border: none;
@@ -121,25 +118,26 @@ $font_size_3: 16px;
 						float: left;
 						flex-direction: column;
 						@media only screen and (max-width: 480px) {
-							width: 50%;
+							padding: 5px;
 						}
 						img{
 							margin-bottom: 10px;
 							width: 36px;
 							height: 36px;
 							@media only screen and (max-width: 480px) {
-								width: 30px;
-								height: 30px;
+								width: 20px;
+								height: 20px;
+								margin-bottom: 5px;
 							}
 						}
 						span{
 							font-size: $font_size_2;
 							font-weight: 600;
 							@media only screen and (max-width: 480px) {
-								font-size: 16px;
+								font-size: 14px;
 							}
 							@media only screen and (max-width: 320px) {
-								font-size: 14px;
+								font-size: 12px;
 							}
 						}
 					}
