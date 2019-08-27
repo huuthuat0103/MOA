@@ -53,6 +53,10 @@
       overflow: hidden;
       @include hover-circle;
 
+      @media screen and (max-width: 480px) {
+       width: 160px;
+      }
+
       img {
         width: 100%;
         height: 190px;
@@ -67,6 +71,10 @@
 
     .content-box {
       margin-left: 25px;
+
+      @media screen and (max-width: 480px) {
+      margin-left: 10px;
+      }
 
       .title-box {
         h4 {

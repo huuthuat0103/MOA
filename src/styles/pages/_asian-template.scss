@@ -217,6 +217,20 @@ button {
   .card-group {
     display: block;
 
+    .row {
+      .col-6 {
+        @media screen and (max-width: 480px) {
+         &:nth-child(n) {
+           padding-right: 5px;
+         }
+         &:nth-child(2n) {
+          padding-left: 5px;
+          padding-right: 15px;;
+        }
+        }
+      }
+    }
+
     .card {
       background: #fff;
       border: none;
@@ -235,16 +249,24 @@ button {
         overflow: hidden;
         transition: .2s;
        @include hover-circle;
+       @media screen and (max-width: 480px) {
+        height: 180px;
+      }
 
         img {
           object-fit: cover;
           height: 100%;
           border-radius: 5px 5px 0 0;
         }
+       
       }
 
       .card-content {
         padding: 15px;
+
+        @media screen and (max-width: 480px) {
+        padding: 10px;
+        }
 
         .title a {
           font-size: 24px;
@@ -253,7 +275,7 @@ button {
           cursor: pointer;
 
           @media screen and (max-width: 480px) {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
 
@@ -263,7 +285,7 @@ button {
           color: #5e5e5e;
 
           @media screen and (max-width: 480px) {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -274,6 +296,11 @@ button {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        padding: 0 15px;
+
+        @media screen and (max-width: 480px) {
+         padding: 0 10px;
+        }
 
         .left {
           p {
@@ -283,6 +310,7 @@ button {
 
             @media screen and (max-width: 480px) {
               font-size: 14px;
+              margin-bottom: 5px;
             }
           }
         }
@@ -294,7 +322,7 @@ button {
             color: #9c2e92;
 
             @media screen and (max-width: 480px) {
-              font-size: 16px;
+              font-size: 14px;
             }
           }
         }
@@ -460,6 +488,28 @@ button {
       &:hover {
         background: #9c2e92;
         color: $color-white;
+      }
+    }
+
+    .drop-sort.dropdown-menu {
+      left: auto !important;
+      right: 0;
+      top: 13px !important;
+      width: 200px;
+
+      @media screen and (max-width: 480px) { 
+        left: 0 !important;
+      }
+
+      a {
+        font-size: 18px;
+        color: #6b6b6b;
+        font-weight: bold;
+        padding: 10px 15px;
+      }
+
+      .item-down {
+        border-top: 1px solid #e1e1e1;
       }
     }
   }
@@ -924,14 +974,15 @@ button {
 
   .result-search {
     border-radius: 20px;
-    padding: 40px;
+    // padding: 40px;
     min-height: 500px;
     background-size: 100%;
     background-repeat: no-repeat;
+    position: relative;
     width: 100%;
     background-image: url(../../images/background/theworld.png);
     @media screen and (max-width: 480px) {
-      padding: 15px;
+      // padding: 15px;
       min-height: 350px;
     }
 
@@ -944,6 +995,139 @@ button {
 
       @media screen and (max-width: 480px) {
         font-size: 16px;
+      }
+    }
+
+    .name-address {
+      width: 100%;
+      min-height: 500px;
+      display: block;
+      @media screen and (max-width: 480px) {
+        // padding: 15px;
+        min-height: 350px;
+      }
+      .item {
+        font-size: 18px;
+        font-weight: bold;
+        position: absolute;
+        z-index: 99999;
+        cursor: pointer;
+
+        @media screen and (max-width: 480px) {
+          font-size: 12px;
+        }
+      }
+      .item-a {
+        left: 15%;
+        top: 15%;
+        @media screen and (max-width: 480px) {
+          left: 12%;
+          top: 10%;
+        }
+      }
+      .item-b {
+        left: 54%;
+        top: 10%;
+
+        @media screen and (max-width: 480px) {
+          left: 54%;
+          top: 4%;
+        }
+      }
+      .item-c {
+        left: 70%;
+        top: 15%;
+
+        @media screen and (max-width: 480px) {
+          left: 70%;
+          top: 10%;
+        }
+      }
+      .item-d {
+        left: 86%;
+        top: 55%;
+
+        @media screen and (max-width: 480px) {
+          left: 86%;
+          top: 38%;
+        }
+      }
+      .item-e {
+        left: 49%;
+         top: 33%;
+
+        @media screen and (max-width: 480px) {
+          left: 49%;
+          top: 23%;
+        }
+      }
+      }
+      .maps{
+        width: 100%;
+        display: block;
+        position: absolute;
+        min-height: 500px;
+        top: 0;
+        left: 0;
+      .item-map-a {
+        background-image: url(../../images/background/usa.png);
+        width: 100%;
+        position: absolute;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: none;
+        top: 0;
+        left: 0;
+        min-height: 500px;
+        z-index: 99;
+      }
+      .item-map-b {
+        background-image: url(../../images/background/europe.png);
+        width: 100%;
+        position: absolute;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: none;
+        top: 0;
+        left: 0;
+        min-height: 500px;
+        z-index: 99;
+      }
+      .item-map-c {
+        background-image: url(../../images/background/asia1.png);
+        width: 100%;
+        position: absolute;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: none;
+        top: 0;
+        left: 0;
+        min-height: 500px;
+        z-index: 99;
+      }
+      .item-map-d {
+        background-image: url(../../images/background/namTBD.png);
+        width: 100%;
+        position: absolute;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: none;
+        top: 0;
+        left: 0;
+        min-height: 500px;
+        z-index: 99;
+      }
+      .item-map-e {
+        background-image: url(../../images/background/africa2.png);
+        width: 100%;
+        position: absolute;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        display: none;
+        top: 0;
+        left: 0;
+        min-height: 500px;
+        z-index: 99;
       }
     }
   }
@@ -960,6 +1144,8 @@ button {
   left: 0;
   right: 0;
   opacity: 0;
+  overflow-y: scroll;
+  @include scroll;
   z-index: -1;
   padding: 25px 16px;
   @include transition-3;
@@ -985,7 +1171,121 @@ button {
     }
 
     .content-popup {
-      min-height: 500px;
+      min-height: 600px;
+
+      .mycalender {
+        #calendar_weekdays {
+          border-bottom: 1px solid #e1e1e1;
+          margin-bottom: 20px;
+        }
+        #calendar{
+          margin-left: auto;
+          margin-right: auto;
+          width: 320px;
+          font-family: 'Lato', sans-serif;
+
+          .calendar_header {
+            display: flex;
+            align-items: center;
+            .current_date {
+              background: #f3eaf2;
+              border-radius: 5px;
+              padding: 5px;
+              span {
+                display: block
+              }
+            }
+            .date {
+              color: #9c2e92;
+              font-weight: bold;
+              font-size: 18px;
+            }
+          }
+        }
+        #calendar_weekdays div{
+          display:inline-block;
+          vertical-align:top;
+        }
+        #calendar_content, #calendar_weekdays, #calendar_header{
+          position: relative;
+          width: 320px;
+          overflow: hidden;
+          float: left;
+          
+          z-index: 10;
+        }
+        #calendar_weekdays div, #calendar_content div{
+          width:40px;
+          height: 40px;
+          overflow: hidden;
+          text-align: center;
+          background-color: #FFFFFF;
+          color: #787878;
+        }
+        #calendar_content{
+          -webkit-border-radius: 0px 0px 12px 12px;
+          -moz-border-radius: 0px 0px 12px 12px; 
+          border-radius: 0px 0px 12px 12px;
+        }
+        #calendar_content div{
+          float: left;
+        }
+        #calendar_content div:hover{
+          background-color: yellow;
+          border-radius: 50%;
+        }
+        #calendar_content div.blank{
+          background-color:transparent;
+        }
+        #calendar_header, #calendar_content div.today{
+          zoom: 1;
+          filter: alpha(opacity=70);
+          opacity: 0.7;
+          border-radius: 50%;
+        }
+        #calendar_content div.today {
+          background: #9c2e92;
+          color: #fff !important;
+        }
+        
+
+        #calendar_content div.today{
+          color: #000;
+        }
+        #calendar_header{
+          width: 100%;
+          height: 37px;
+          text-align: center;
+          padding: 18px 0;
+          -webkit-border-radius: 12px 12px 0px 0px;
+          -moz-border-radius: 12px 12px 0px 0px; 
+          border-radius: 12px 12px 0px 0px;
+        }
+        #calendar_header h1{
+          font-size: 1.5em;
+          color: #9c2e92;
+          float:left;
+          width:70%;
+          font-weight: bold;
+
+          @media screen and (max-width: 480px) {
+           font-size: 1em;
+           width: 40%;
+          }
+        }
+        i[class^=icon-chevron]{
+          color: #9c2e92;
+          float: left;
+          width:10%;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+      }
     }
   }
 }
+
+.color-white {
+  color: #fff !important;
+}
+

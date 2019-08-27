@@ -90,11 +90,18 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="box_sum box_right">
-                                <button class="btn_control btn-sort">
+                            <div class="box_sum box_right dropdown">
+                                <button class="btn_control btn-sort dropdown-toggle"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-sort-amount-down"></i>
                                     <span class="ml-1"> 정렬</span>
-                                </button></div>
+                                </button>
+                                <div class="dropdown-menu drop-sort" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">추천 상품 순
+                                    </a>
+                                    <a class="dropdown-item item-down" href="#">낮은 가격 순</a>
+                                  </div>
+                                
+                            </div>
                         </div>
                         <!-- popup -->
                         <div class="popup-fillter">
@@ -721,8 +728,8 @@
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="exampleInputEmaisl1" aria-describedby="emailHelp" placeholder=" ">
                                         <button class="btn btn-search">
-                                            <img src="./images/icon/bullet_search.png" alt="">
-                                      </button> 
+                                        <img src="./images/icon/bullet_search.png" alt="">
+                                      </button>
                                       </div>                             
                                 </form>
                                 <div class="result-search">
@@ -730,6 +737,38 @@
                                     <p>영국 바이런베이</p>
                                     <p>호주 울런공</p>
                                     <p>호주 환런</p>
+                                    <div class="name-address">
+                                        <span class="item item-a btn">
+                                            미주
+                                        </span>
+                                        <span class="item item-b btn">
+                                            유럽
+                                        </span>
+                                        <span class="item item-c">
+                                            아시아
+                                        </span>
+                                        <span class="item item-d">
+                                            오세아니아
+                                        </span>
+                                        <span class="item item-e">
+                                            아프리카
+                                        </span>
+                                    </div>
+
+                                    <div class="maps">
+                                        <div class="item-maps item-map-a">
+                                        </div>
+                                        <div class="item-maps item-map-b">
+                                        </div>
+                                        <div class="item-maps item-map-c">
+                                        </div>
+                                        <div class="item-maps item-map-d">
+
+                                        </div>
+                                        <div class="item-maps item-map-e">
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <footer class="main_footer">
@@ -753,7 +792,21 @@
                                <h4 class="title-date">
                                 출발일자를 선택해 주세요  
                                </h4>
-                               <div class="content-popup"></div>
+                               <div class="content-popup">
+                                    <div class="mycalender">
+                                        <div id="calendar">
+                                            <div id="calendar_header" class="calendar_header">
+                                                <span class="current_date">
+                                                    <span class="thu" id="thu">THU</span>
+                                                    <span class="date" id="date_z"></span>
+                                                </span>
+                                                 <h1></h1><i class="icon-chevron-left fas fa-chevron-left"></i><i class="icon-chevron-right fas fa-chevron-right"></i>
+                                                </div>
+                                            <div id="calendar_weekdays"></div>
+                                            <div id="calendar_content"></div>
+                                          </div>
+                                    </div>
+                               </div>
                             </div>
                             <footer class="main_footer">
                                 @@include('../layouts/footer.html')
@@ -763,7 +816,7 @@
 
                         <div class="card-group">
                             <div class="row mb-4">
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <div class="card">
                                         <div class="img-thumnail">
                                             <a href="">
@@ -795,7 +848,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <div class="card">
                                         <div class="img-thumnail">
                                             <a href="">
@@ -830,7 +883,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <div class="card">
                                         <div class="img-thumnail">
                                             <a href="">
@@ -862,7 +915,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-6">
                                     <div class="card">
                                         <div class="img-thumnail">
                                             <a href="">
