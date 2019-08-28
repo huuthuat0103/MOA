@@ -1,8 +1,8 @@
 body {
-  background: #f5f5f5 !important;
+  background: #fff !important;
 }
 .content, .container_main {
-  background: #fff;
+  background: #f5f5f5;
 }
 button {
   cursor: pointer;
@@ -18,7 +18,7 @@ button {
   padding: 25px;
   margin-top: 60px;
   display: block;
-  background: #fff;
+  background: #f5f5f5;
   @media screen and (max-width: 567px) {
     padding: 25px 15px;
   }
@@ -511,6 +511,9 @@ button {
       .item-down {
         border-top: 1px solid #e1e1e1;
       }
+    }
+    .dropdown-toggle::after{
+      display: none !important;
     }
   }
   @media screen and (max-width: 375px) {
