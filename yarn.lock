@@ -3917,6 +3917,11 @@ js-beautify@^1.8.9:
     mkdirp "~0.5.0"
     nopt "~4.0.1"
 
+js-datepicker@^5.0.2:
+  version "5.14.1"
+  resolved "https://registry.yarnpkg.com/js-datepicker/-/js-datepicker-5.14.1.tgz#c4aed0f9a065a704fe061296b0d8f37e80830ded"
+  integrity sha512-RPpQZuzsZTQRpm+nz4VfKLO6rPpqR2PDervK7gs9NuNmb3hiZaXHWMfLUXvBwNhAXU4uk59gnBOVxzQck+NowQ==
+
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -7158,9 +7163,9 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
-  integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.4.tgz#7f8473bc839dfd87608adb95d7eb075211578a42"
+  integrity sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==
 
 which-module@^1.0.0:
   version "1.0.0"
